@@ -39,16 +39,16 @@ scale = Vector2(0.99999964, 0.99999946)
 shape = SubResource("RectangleShape2D_uwrxv")
 
 [node name="Player" parent="." unique_id=1822421311 instance=ExtResource("2_yqjtg")]
-position = Vector2(580, 508)
+position = Vector2(143, 496)
 jump_force = -800.0
 gravity = 1200.0
 
 [node name="wall_test" parent="." unique_id=1444714008 instance=ExtResource("5_iywne")]
-position = Vector2(799, 421.00003)
+position = Vector2(1170, 421.00003)
 scale = Vector2(1, 1.4000013)
 
 [node name="wall_test2" parent="." unique_id=3159626 instance=ExtResource("5_iywne")]
-position = Vector2(351, 421.00003)
+position = Vector2(1170, 421.00003)
 scale = Vector2(1, 1.4000013)
 
 [node name="Point" parent="." unique_id=970862108 instance=ExtResource("6_p57ef")]
