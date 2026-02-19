@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://dka84p3u16eu5"]
+
+[ext_resource type="Texture2D" uid="uid://cbb5oinmb486m" path="res://sprites/background.jpg" id="1_r0uly"]
+[ext_resource type="Script" uid="uid://d3tpf2fspsw0b" path="res://scripts/point.gd" id="1_tue75"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tue75"]
+size = Vector2(32, 69.9592)
+
+[node name="Point" type="Area2D" unique_id=314270088 groups=["Points"]]
+collision_layer = 2
+script = ExtResource("1_tue75")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1718729760]
+modulate = Color(4.4848967, 4.4848967, 0, 1)
+rotation = -3.1415927
+scale = Vector2(0.040000774, -0.16000064)
+texture = ExtResource("1_r0uly")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=624822057]
+scale = Vector2(1.0058446, 1.0291713)
+shape = SubResource("RectangleShape2D_tue75")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

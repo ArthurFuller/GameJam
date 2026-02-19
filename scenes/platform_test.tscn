@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://ccw2meubjn35t"]
+
+[ext_resource type="Texture2D" uid="uid://cbb5oinmb486m" path="res://sprites/background.jpg" id="1_clysx"]
+[ext_resource type="Script" uid="uid://dlw321xea816e" path="res://Scripts/platform.gd" id="1_tthgi"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tthgi"]
+size = Vector2(224, 36)
+
+[node name="Platform_test" type="StaticBody2D" unique_id=163073138]
+input_pickable = true
+script = ExtResource("1_tthgi")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=769801745]
+modulate = Color(1.7141744, 0, 0, 1)
+scale = Vector2(0.27999887, 0.08000094)
+texture = ExtResource("1_clysx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=399138599]
+shape = SubResource("RectangleShape2D_tthgi")

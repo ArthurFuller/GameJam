@@ -1,0 +1,76 @@
+[gd_scene format=3 uid="uid://durc4x7dmglmm"]
+
+[ext_resource type="Script" uid="uid://d1bepfyany6vk" path="res://scripts/game.gd" id="1_lnu2h"]
+[ext_resource type="Texture2D" uid="uid://cbb5oinmb486m" path="res://sprites/background.jpg" id="1_uwrxv"]
+[ext_resource type="PackedScene" uid="uid://ccw2meubjn35t" path="res://scenes/platform_test.tscn" id="2_lbhrr"]
+[ext_resource type="PackedScene" uid="uid://j54lupoylhq8" path="res://scenes/player.tscn" id="2_yqjtg"]
+[ext_resource type="PackedScene" uid="uid://mteggjd75p80" path="res://scenes/wall_test.tscn" id="5_iywne"]
+[ext_resource type="PackedScene" uid="uid://dka84p3u16eu5" path="res://scenes/point.tscn" id="6_p57ef"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uwrxv"]
+size = Vector2(800.0001, 449.99976)
+
+[sub_resource type="LabelSettings" id="LabelSettings_p57ef"]
+font_size = 80
+outline_size = 8
+outline_color = Color(0, 0, 0, 1)
+
+[node name="Game" type="Node2D" unique_id=305899340]
+script = ExtResource("1_lnu2h")
+object_click = ExtResource("2_lbhrr")
+
+[node name="BackGround" type="Sprite2D" parent="." unique_id=1698583408]
+texture = ExtResource("1_uwrxv")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 1280, 720)
+
+[node name="Ground" type="Sprite2D" parent="." unique_id=1745613303]
+modulate = Color(0, 3.7285564, 0, 1)
+position = Vector2(640.00006, 691.00006)
+scale = Vector2(1.6425, 0.12888889)
+texture = ExtResource("1_uwrxv")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Ground" unique_id=436779493]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground/StaticBody2D" unique_id=24109202]
+position = Vector2(-3.0517578e-05, -0.00048828125)
+scale = Vector2(0.99999964, 0.99999946)
+shape = SubResource("RectangleShape2D_uwrxv")
+
+[node name="Player" parent="." unique_id=1822421311 instance=ExtResource("2_yqjtg")]
+position = Vector2(580, 508)
+jump_force = -800.0
+gravity = 1200.0
+
+[node name="wall_test" parent="." unique_id=1444714008 instance=ExtResource("5_iywne")]
+position = Vector2(799, 421.00003)
+scale = Vector2(1, 1.4000013)
+
+[node name="wall_test2" parent="." unique_id=3159626 instance=ExtResource("5_iywne")]
+position = Vector2(351, 421.00003)
+scale = Vector2(1, 1.4000013)
+
+[node name="Point" parent="." unique_id=970862108 instance=ExtResource("6_p57ef")]
+position = Vector2(1170, 99.99997)
+scale = Vector2(1, 1.4000013)
+
+[node name="Point2" parent="." unique_id=56427442 instance=ExtResource("6_p57ef")]
+position = Vector2(580, 282)
+scale = Vector2(1, 1.4000013)
+
+[node name="Point3" parent="." unique_id=272334103 instance=ExtResource("6_p57ef")]
+position = Vector2(799, 100)
+scale = Vector2(1, 1.4000013)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2088507319]
+
+[node name="Points" type="Label" parent="CanvasLayer" unique_id=1354004126]
+clip_contents = true
+offset_left = 41.0
+offset_right = 168.0
+offset_bottom = 110.0
+size_flags_vertical = 1
+text = "0"
+label_settings = SubResource("LabelSettings_p57ef")
+autowrap_trim_flags = 0
