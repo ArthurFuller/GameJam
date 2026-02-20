@@ -6,6 +6,9 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tthgi"]
 size = Vector2(224, 36)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6jvd8"]
+size = Vector2(224, 36)
+
 [node name="Platform_test" type="StaticBody2D" unique_id=163073138]
 input_pickable = true
 script = ExtResource("1_tthgi")
@@ -17,3 +20,13 @@ texture = ExtResource("1_clysx")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=399138599]
 shape = SubResource("RectangleShape2D_tthgi")
+
+[node name="PlacementArea" type="Area2D" parent="." unique_id=1103604009]
+collision_layer = 128
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlacementArea" unique_id=706330910]
+shape = SubResource("RectangleShape2D_6jvd8")
+
+[connection signal="body_entered" from="PlacementArea" to="." method="_on_placement_area_body_entered"]
+[connection signal="body_exited" from="PlacementArea" to="." method="_on_placement_area_body_exited"]

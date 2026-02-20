@@ -6,6 +6,9 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ubny0"]
 size = Vector2(179, 38)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ejwbm"]
+size = Vector2(179, 38)
+
 [node name="BouncePlatform" type="StaticBody2D" unique_id=1083626917 groups=["bounce"]]
 input_pickable = true
 script = ExtResource("1_ejwbm")
@@ -19,3 +22,12 @@ texture = ExtResource("2_omwaj")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1993615845]
 position = Vector2(12.5, -9)
 shape = SubResource("RectangleShape2D_ubny0")
+
+[node name="PlacementArea" type="Area2D" parent="." unique_id=357992788]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlacementArea" unique_id=2027642056]
+position = Vector2(12.5, -9)
+shape = SubResource("RectangleShape2D_ejwbm")
+
+[connection signal="body_entered" from="PlacementArea" to="." method="_on_placement_area_body_entered"]
+[connection signal="body_exited" from="PlacementArea" to="." method="_on_placement_area_body_exited"]
