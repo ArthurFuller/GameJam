@@ -9,7 +9,7 @@ var points:int = 0
 func _process(delta: float) -> void:
 	label_points.text = str(points)
 
-
+'''
 func _input(event: InputEvent) -> void:
 	
 	if event is InputEventMouseButton and event.pressed:
@@ -28,3 +28,4 @@ func _input(event: InputEvent) -> void:
 				var object = object_click.instantiate()
 				object.global_position = get_global_mouse_position()
 				add_child(object)
+'''

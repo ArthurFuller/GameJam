@@ -8,6 +8,8 @@ func _ready() -> void:
 
 func _input_event(viewport: Viewport, event: InputEvent, shape_idx: int) -> void:
 	
+	print("Bounce recebeu clique")
+	
 	if not can_destroy:
 		return
 	

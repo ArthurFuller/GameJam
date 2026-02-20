@@ -1,20 +1,21 @@
 [gd_scene format=3 uid="uid://dyh011n46ogdq"]
 
-[ext_resource type="Script" uid="uid://ccehepn6notrc" path="res://scripts/bounce_platform.gd" id="1_ejwbm"]
+[ext_resource type="Script" uid="uid://ccehepn6notrc" path="res://Scripts/bounce_platform.gd" id="1_ejwbm"]
 [ext_resource type="Texture2D" uid="uid://cbb5oinmb486m" path="res://sprites/background.jpg" id="2_omwaj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ubny0"]
 size = Vector2(179, 38)
 
 [node name="BouncePlatform" type="StaticBody2D" unique_id=1083626917 groups=["bounce"]]
+input_pickable = true
 script = ExtResource("1_ejwbm")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1993615845]
-position = Vector2(12.5, -9)
-shape = SubResource("RectangleShape2D_ubny0")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=258686326]
 modulate = Color(5.129198, 0, 5.129198, 1)
 position = Vector2(12.499992, -9.000008)
 scale = Vector2(0.22374998, 0.08444445)
 texture = ExtResource("2_omwaj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1993615845]
+position = Vector2(12.5, -9)
+shape = SubResource("RectangleShape2D_ubny0")

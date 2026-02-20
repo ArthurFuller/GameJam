@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://mteggjd75p80" path="res://scenes/wall_test.tscn" id="5_iywne"]
 [ext_resource type="PackedScene" uid="uid://dka84p3u16eu5" path="res://scenes/point.tscn" id="6_p57ef"]
 [ext_resource type="PackedScene" uid="uid://dfr6a8kfadc4d" path="res://scenes/wall_sticky.tscn" id="7_gee14"]
-[ext_resource type="PackedScene" uid="uid://dyh011n46ogdq" path="res://scenes/bounce_platform.tscn" id="7_u5sy4"]
+[ext_resource type="PackedScene" uid="uid://bsgvg314fdwyy" path="res://scenes/stamps_ui.tscn" id="9_0tnpc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uwrxv"]
 size = Vector2(800.0001, 449.99976)
@@ -77,9 +77,6 @@ text = "0"
 label_settings = SubResource("LabelSettings_p57ef")
 autowrap_trim_flags = 0
 
-[node name="BouncePlatform" parent="." unique_id=1083626917 instance=ExtResource("7_u5sy4")]
-position = Vector2(243, 100)
-
 [node name="wall_sticky" parent="." unique_id=1153802401 instance=ExtResource("7_gee14")]
 position = Vector2(416, 421)
 scale = Vector2(0.3199994, 1.4000013)
@@ -87,3 +84,5 @@ scale = Vector2(0.3199994, 1.4000013)
 [node name="wall_sticky2" parent="." unique_id=1435152901 instance=ExtResource("7_gee14")]
 position = Vector2(760, 421)
 scale = Vector2(0.3199994, 1.4000013)
+
+[node name="StampsManager" parent="." unique_id=1187935829 instance=ExtResource("9_0tnpc")]

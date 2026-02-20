@@ -13,6 +13,8 @@ script = ExtResource("1_g2els")
 speed = 350.0
 jump_force = -500.0
 gravity = 10000.0
+wall_jump_force = -600.0
+wall_jump_push = 400.0
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=318477649]
 modulate = Color(5.5617785, 5.5617785, 2.4300368, 1)
