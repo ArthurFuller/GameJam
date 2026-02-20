@@ -1,11 +1,13 @@
 [gd_scene format=3 uid="uid://durc4x7dmglmm"]
 
-[ext_resource type="Script" uid="uid://d1bepfyany6vk" path="res://scripts/game.gd" id="1_lnu2h"]
+[ext_resource type="Script" uid="uid://d1bepfyany6vk" path="res://Scripts/game.gd" id="1_lnu2h"]
 [ext_resource type="Texture2D" uid="uid://cbb5oinmb486m" path="res://sprites/background.jpg" id="1_uwrxv"]
 [ext_resource type="PackedScene" uid="uid://ccw2meubjn35t" path="res://scenes/platform_test.tscn" id="2_lbhrr"]
 [ext_resource type="PackedScene" uid="uid://j54lupoylhq8" path="res://scenes/player.tscn" id="2_yqjtg"]
 [ext_resource type="PackedScene" uid="uid://mteggjd75p80" path="res://scenes/wall_test.tscn" id="5_iywne"]
 [ext_resource type="PackedScene" uid="uid://dka84p3u16eu5" path="res://scenes/point.tscn" id="6_p57ef"]
+[ext_resource type="PackedScene" uid="uid://dfr6a8kfadc4d" path="res://scenes/wall_sticky.tscn" id="7_gee14"]
+[ext_resource type="PackedScene" uid="uid://dyh011n46ogdq" path="res://scenes/bounce_platform.tscn" id="7_u5sy4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uwrxv"]
 size = Vector2(800.0001, 449.99976)
@@ -39,7 +41,7 @@ scale = Vector2(0.99999964, 0.99999946)
 shape = SubResource("RectangleShape2D_uwrxv")
 
 [node name="Player" parent="." unique_id=1822421311 instance=ExtResource("2_yqjtg")]
-position = Vector2(143, 496)
+position = Vector2(582, 524)
 jump_force = -800.0
 gravity = 1200.0
 
@@ -56,11 +58,11 @@ position = Vector2(1170, 99.99997)
 scale = Vector2(1, 1.4000013)
 
 [node name="Point2" parent="." unique_id=56427442 instance=ExtResource("6_p57ef")]
-position = Vector2(580, 282)
+position = Vector2(527, 91)
 scale = Vector2(1, 1.4000013)
 
 [node name="Point3" parent="." unique_id=272334103 instance=ExtResource("6_p57ef")]
-position = Vector2(799, 100)
+position = Vector2(845, 72)
 scale = Vector2(1, 1.4000013)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2088507319]
@@ -74,3 +76,14 @@ size_flags_vertical = 1
 text = "0"
 label_settings = SubResource("LabelSettings_p57ef")
 autowrap_trim_flags = 0
+
+[node name="BouncePlatform" parent="." unique_id=1083626917 instance=ExtResource("7_u5sy4")]
+position = Vector2(243, 100)
+
+[node name="wall_sticky" parent="." unique_id=1153802401 instance=ExtResource("7_gee14")]
+position = Vector2(416, 421)
+scale = Vector2(0.3199994, 1.4000013)
+
+[node name="wall_sticky2" parent="." unique_id=1435152901 instance=ExtResource("7_gee14")]
+position = Vector2(760, 421)
+scale = Vector2(0.3199994, 1.4000013)

@@ -6,26 +6,15 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ubny0"]
 size = Vector2(179, 38)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_tfjqv"]
-size = Vector2(179, 38)
-
-[node name="BouncePlatform" type="StaticBody2D" unique_id=1083626917]
+[node name="BouncePlatform" type="StaticBody2D" unique_id=1083626917 groups=["bounce"]]
 script = ExtResource("1_ejwbm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1993615845]
+position = Vector2(12.5, -9)
+shape = SubResource("RectangleShape2D_ubny0")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=258686326]
 modulate = Color(5.129198, 0, 5.129198, 1)
 position = Vector2(12.499992, -9.000008)
 scale = Vector2(0.22374998, 0.08444445)
 texture = ExtResource("2_omwaj")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1993615845]
-position = Vector2(12.5, -9)
-shape = SubResource("RectangleShape2D_ubny0")
-
-[node name="Area2D" type="Area2D" parent="." unique_id=722533958]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1096207855]
-position = Vector2(12.5, -9)
-shape = SubResource("RectangleShape2D_tfjqv")
-
-[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
