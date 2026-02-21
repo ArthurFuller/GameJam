@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dyh011n46ogdq"]
 
-[ext_resource type="Script" uid="uid://ccehepn6notrc" path="res://Scripts/bounce_platform.gd" id="1_ejwbm"]
+[ext_resource type="Script" uid="uid://dlw321xea816e" path="res://Scripts/platform.gd" id="1_ejwbm"]
 [ext_resource type="Texture2D" uid="uid://cbb5oinmb486m" path="res://sprites/background.jpg" id="2_omwaj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ubny0"]

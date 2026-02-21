@@ -11,8 +11,7 @@ scale = Vector2(-0.095, 0.179)
 collision_mask = 3
 script = ExtResource("1_g2els")
 speed = 350.0
-jump_force = -500.0
-gravity = 10000.0
+gravity = 1200.0
 wall_jump_force = -600.0
 wall_jump_push = 400.0
 

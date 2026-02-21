@@ -42,8 +42,8 @@ shape = SubResource("RectangleShape2D_uwrxv")
 
 [node name="Player" parent="." unique_id=1822421311 instance=ExtResource("2_yqjtg")]
 position = Vector2(582, 524)
-jump_force = -800.0
-gravity = 1200.0
+jump_force = -900.0
+gravity = 2000.0
 
 [node name="wall_test" parent="." unique_id=1444714008 instance=ExtResource("5_iywne")]
 position = Vector2(1170, 421.00003)

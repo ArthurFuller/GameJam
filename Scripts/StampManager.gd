@@ -13,6 +13,9 @@ var current_mode = ""
 func _process(delta: float) -> void:
 	if ghost:
 		ghost.global_position = get_global_mouse_position()
+		
+	if game.points <= 0:
+		clear_ghost()
 
 func _unhandled_input(event: InputEvent) -> void:
 	
