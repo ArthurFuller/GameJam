@@ -4,6 +4,8 @@ var can_destroy:bool = false
 var is_preview:bool = false
 var can_place:bool = true
 
+@onready var game = get_node("/root/Game")
+
 func _ready() -> void:
 	
 	if is_preview:
@@ -24,6 +26,7 @@ func _input_event(viewport: Viewport, event: InputEvent, shape_idx: int) -> void
 	
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT && event.pressed:
+			game.points += 1
 			queue_free()
 
 

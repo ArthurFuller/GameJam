@@ -4,7 +4,7 @@ extends Node2D
 
 @onready var label_points = $CanvasLayer/Points
 
-var points:int = 0
+var points:int = 3
 
 func _process(delta: float) -> void:
 	label_points.text = str(points)

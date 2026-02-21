@@ -3,6 +3,8 @@ extends Area2D
 var is_sticky:bool = false
 var original_color:Color
 
+@onready var game = get_node("/root/Game")
+
 func _ready() -> void:
 	monitoring = false
 	original_color = modulate
@@ -17,12 +19,14 @@ func activate():
 	monitoring = true
 	is_sticky = true
 	modulate = Color(0.0, 10.55, 0.0, 1.0)
+	game.points -= 1
 	
 
 func deactivate():
 	monitoring = false
 	is_sticky = false
 	modulate = original_color
+	game.points += 1
 
 func _on_body_entered(body: Node2D) -> void:
 	print ("Entrou:", body.name)
