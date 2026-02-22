@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://cokjcha33vqll"]
+
+[ext_resource type="Script" uid="uid://bk7sulqe4f8cq" path="res://Scripts/change_scene.gd" id="1_8qaeg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5c52e"]
+
+[node name="Change_scene" type="Area2D" unique_id=929600850]
+modulate = Color(0, 18.892157, 0, 1)
+scale = Vector2(1, 9.888)
+script = ExtResource("1_8qaeg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1271368400]
+shape = SubResource("RectangleShape2D_5c52e")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

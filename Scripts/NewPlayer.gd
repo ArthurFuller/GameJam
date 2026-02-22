@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 @export var speed:float = 200.0
 @export var jump_force:float = -400.0
-@export var gravity:float = 900.0
+const GRAVIDADE = 4000
 
 @export var wall_jump_force: float = -700
 @export var wall_jump_speed: float = 500
@@ -22,7 +22,7 @@ func bounce(force: float):
 func _physics_process(delta: float) -> void:
 	
 	if not is_on_floor():
-		velocity.y += gravity * delta
+		velocity.y += GRAVIDADE * delta
 		
 	if not is_wall_sliding:
 		var direction = Input.get_vector("Left", "Right", "ui_up", "ui_down")

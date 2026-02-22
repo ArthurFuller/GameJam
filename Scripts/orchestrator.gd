@@ -5,7 +5,8 @@ extends Node
 
 
 func _on_play_pressed() -> void:
-	TransitionManager.fade_to_scene("res://scenes/game.tscn")
+	LevelManager.current_level = 1
+	TransitionManager.fade_to_scene("res://scenes/gameplay_1.tscn")
 	#get_tree().change_scene_to_file("res://scenes/game.tscn")
 
 func _on_options_pressed() -> void:

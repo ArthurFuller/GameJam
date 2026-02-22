@@ -33,3 +33,14 @@ position = Vector2(-100, 0)
 scale = Vector2(16.05, 16.05)
 target_position = Vector2(-26, 0)
 collide_with_areas = true
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=939313712]
+position = Vector2(31.578947, -33.519554)
+zoom = Vector2(1.475, 1.475)
+limit_left = 0
+limit_top = 0
+limit_right = 1920
+limit_bottom = 1080
+limit_smoothed = true
+position_smoothing_enabled = true
+position_smoothing_speed = 100.0
