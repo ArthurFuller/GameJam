@@ -1,14 +1,14 @@
 [gd_scene format=3 uid="uid://dfr6a8kfadc4d"]
 
-[ext_resource type="Script" uid="uid://f5lbuimj76w6" path="res://scripts/wall_sticky.gd" id="1_0fanl"]
+[ext_resource type="Script" uid="uid://f5lbuimj76w6" path="res://Scripts/wall_sticky.gd" id="1_0fanl"]
 [ext_resource type="Texture2D" uid="uid://cbb5oinmb486m" path="res://sprites/background.jpg" id="1_y7ywl"]
-[ext_resource type="Script" uid="uid://dlcuebymry70t" path="res://scripts/sticky_area.gd" id="3_dcptj"]
+[ext_resource type="Script" uid="uid://dlcuebymry70t" path="res://Scripts/sticky_area.gd" id="3_dcptj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5crba"]
 size = Vector2(224, 342)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vpvak"]
-size = Vector2(259.3755, 342)
+size = Vector2(225.00043, 342)
 
 [node name="wall_sticky" type="StaticBody2D" unique_id=3159626]
 modulate = Color(0, 1, 1, 1)
@@ -29,7 +29,7 @@ monitoring = false
 script = ExtResource("3_dcptj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StickyArea" unique_id=705651093]
-position = Vector2(1.5624964, 0)
+position = Vector2(-3.7252973e-06, 0)
 shape = SubResource("RectangleShape2D_vpvak")
 
 [connection signal="body_entered" from="StickyArea" to="StickyArea" method="_on_body_entered"]

@@ -4,8 +4,10 @@ extends CharacterBody2D
 @export var jump_force:float = -400.0
 @export var gravity:float = 900.0
 
-@export var wall_jump_force:Vector2 = Vector2(250, -400)
+@export var wall_jump_force: float = -700
+@export var wall_jump_speed: float = 500
 @export var wall_slide_speed:float = 50.0
+
 
 var can_wall_jump:bool = false
 var is_wall_sliding: bool = false
@@ -21,16 +23,19 @@ func _physics_process(delta: float) -> void:
 	
 	if not is_on_floor():
 		velocity.y += gravity * delta
+		
+	if not is_wall_sliding:
+		var direction = Input.get_vector("Left", "Right", "ui_up", "ui_down")
+		var horizontal_dir = Vector2(direction.x, 0).normalized()
+		velocity.x = horizontal_dir.x * speed
 
 	if (Input.is_action_just_pressed("Jump")) and is_on_floor():
 		velocity.y = jump_force
 	
 	if is_wall_sliding and Input.is_action_just_pressed("Jump"):
-		velocity = Vector2(wall_jump_force.x * wall_direction, wall_jump_force.y)
-		stop_wall_slide()
-	
-	var direction = Input.get_axis("Left", "Right")
-	velocity.x = direction * speed
+		velocity = Vector2(wall_jump_speed * wall_direction, wall_jump_force)
+		#stop_wall_slide()
+		
 	
 	var is_touching_left_wall = ray_left.is_colliding()
 	var is_touching_right_wall = ray_right.is_colliding()

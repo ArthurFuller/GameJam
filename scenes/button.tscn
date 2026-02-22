@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://cy83ojkfcxsnk"]
+
+[node name="Button" type="Button" unique_id=872627944]
+offset_right = 97.0
+offset_bottom = 58.0
+theme_override_font_sizes/font_size = 45
+text = "Jogar"

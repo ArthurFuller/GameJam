@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://bgg28efoqwhby"]
+
+[ext_resource type="Script" uid="uid://ci11uxslym0vp" path="res://Scripts/orchestrator.gd" id="1_1l2ds"]
+[ext_resource type="PackedScene" uid="uid://bksmkeb8hgh1b" path="res://scenes/TitleScreen.tscn" id="2_w3wus"]
+[ext_resource type="PackedScene" uid="uid://ckkl64ns8naqk" path="res://scenes/Options.tscn" id="3_rggio"]
+
+[node name="Orchestrator" type="Node" unique_id=1108221844]
+script = ExtResource("1_1l2ds")
+
+[node name="OptionsMenu" parent="." unique_id=239387256 instance=ExtResource("3_rggio")]
+
+[node name="TitleScreen" parent="." unique_id=1019813897 instance=ExtResource("2_w3wus")]
+script = null
+
+[connection signal="pressed" from="OptionsMenu/MarginContainer/TitleScreenMenu" to="." method="_on_title_screen_menu_pressed"]
+[connection signal="pressed" from="TitleScreen/MarginContainer/PanelContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="TitleScreen/MarginContainer/PanelContainer/VBoxContainer/Options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="TitleScreen/MarginContainer/PanelContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
+
+[editable path="OptionsMenu"]
+[editable path="TitleScreen"]

@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://j54lupoylhq8" path="res://scenes/player.tscn" id="2_yqjtg"]
 [ext_resource type="PackedScene" uid="uid://mteggjd75p80" path="res://scenes/wall_test.tscn" id="5_iywne"]
 [ext_resource type="PackedScene" uid="uid://dka84p3u16eu5" path="res://scenes/point.tscn" id="6_p57ef"]
+[ext_resource type="Script" uid="uid://dr5jp2hqterj5" path="res://scripts/canvas_layer.gd" id="7_0tnpc"]
 [ext_resource type="PackedScene" uid="uid://dfr6a8kfadc4d" path="res://scenes/wall_sticky.tscn" id="7_gee14"]
 [ext_resource type="PackedScene" uid="uid://bsgvg314fdwyy" path="res://scenes/stamps_ui.tscn" id="9_0tnpc"]
 
@@ -15,6 +16,11 @@ size = Vector2(800.0001, 449.99976)
 [sub_resource type="LabelSettings" id="LabelSettings_p57ef"]
 font_size = 80
 outline_size = 8
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_0tnpc"]
+font_size = 126
+outline_size = 26
 outline_color = Color(0, 0, 0, 1)
 
 [node name="Game" type="Node2D" unique_id=305899340]
@@ -44,6 +50,7 @@ shape = SubResource("RectangleShape2D_uwrxv")
 position = Vector2(582, 524)
 jump_force = -900.0
 gravity = 2000.0
+wall_jump_force = Vector2(250, -400)
 
 [node name="wall_test" parent="." unique_id=1444714008 instance=ExtResource("5_iywne")]
 position = Vector2(1170, 421.00003)
@@ -66,6 +73,8 @@ position = Vector2(845, 72)
 scale = Vector2(1, 1.4000013)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2088507319]
+process_mode = 3
+script = ExtResource("7_0tnpc")
 
 [node name="Points" type="Label" parent="CanvasLayer" unique_id=1354004126]
 clip_contents = true
@@ -77,6 +86,45 @@ text = "0"
 label_settings = SubResource("LabelSettings_p57ef")
 autowrap_trim_flags = 0
 
+[node name="Panel" type="Panel" parent="CanvasLayer" unique_id=700837344]
+process_mode = 3
+visible = false
+offset_right = 1280.0
+offset_bottom = 720.0
+mouse_filter = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/Panel" unique_id=1712483611]
+process_mode = 3
+layout_mode = 0
+offset_left = 380.0
+offset_top = 30.0
+offset_right = 900.0
+offset_bottom = 202.0
+text = "Pausado"
+label_settings = SubResource("LabelSettings_0tnpc")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Panel" unique_id=1463414672]
+process_mode = 2
+layout_mode = 0
+offset_left = 527.0
+offset_top = 239.99998
+offset_right = 625.0
+offset_bottom = 306.0
+scale = Vector2(1.95, 1.95)
+
+[node name="Despausar" type="Button" parent="CanvasLayer/Panel/VBoxContainer" unique_id=707026513]
+process_mode = 2
+layout_mode = 2
+text = "Despausar"
+
+[node name="FecharJogo" type="Button" parent="CanvasLayer/Panel/VBoxContainer" unique_id=1682249662]
+process_mode = 2
+layout_mode = 2
+text = "Fechar Jogo
+"
+
 [node name="wall_sticky" parent="." unique_id=1153802401 instance=ExtResource("7_gee14")]
 position = Vector2(416, 421)
 scale = Vector2(0.3199994, 1.4000013)
@@ -86,3 +134,6 @@ position = Vector2(760, 421)
 scale = Vector2(0.3199994, 1.4000013)
 
 [node name="StampsManager" parent="." unique_id=1187935829 instance=ExtResource("9_0tnpc")]
+
+[connection signal="pressed" from="CanvasLayer/Panel/VBoxContainer/Despausar" to="CanvasLayer" method="_on_despausar_pressed"]
+[connection signal="pressed" from="CanvasLayer/Panel/VBoxContainer/FecharJogo" to="CanvasLayer" method="_on_fechar_jogo_pressed"]
