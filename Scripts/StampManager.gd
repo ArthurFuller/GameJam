@@ -5,10 +5,13 @@ extends Node2D
 
 @onready var game = get_node("/root/Game")
 
+
 var ghost = null
 var selected_scene: PackedScene = null
 
 var current_mode = ""
+
+
 
 func _process(delta: float) -> void:
 	if ghost:

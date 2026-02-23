@@ -8,7 +8,7 @@ const GRAVIDADE = 4000
 @export var wall_jump_speed: float = 500
 @export var wall_slide_speed:float = 50.0
 
-
+var can_move: bool
 var can_wall_jump:bool = false
 var is_wall_sliding: bool = false
 var wall_direction: int = 0
@@ -16,10 +16,23 @@ var wall_direction: int = 0
 @onready var ray_left: RayCast2D = $ray_left
 @onready var ray_right: RayCast2D = $ray_right
 
+@onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
+@onready var debug_label: Label = $Label
+
+
+func _ready() -> void:
+	can_move = false
+	await get_tree().create_timer(0.5).timeout
+	can_move = true
+	print(sprite.sprite_frames)
+
 func bounce(force: float):
 	velocity.y = force
 
 func _physics_process(delta: float) -> void:
+	
+	if not can_move:
+		return
 	
 	if not is_on_floor():
 		velocity.y += GRAVIDADE * delta
@@ -48,6 +61,7 @@ func _physics_process(delta: float) -> void:
 		
 		
 	move_and_slide()
+	update_animation()
 	
 	if is_on_floor() and velocity.y >= 0:
 		var collision = get_last_slide_collision()
@@ -58,6 +72,8 @@ func _physics_process(delta: float) -> void:
 			if collider.is_in_group("bounce"):
 				velocity.y = -900.0
 				
+				
+	
 
 func start_wall_slide(left, right):
 	is_wall_sliding = true
@@ -68,3 +84,33 @@ func start_wall_slide(left, right):
 func stop_wall_slide():
 	is_wall_sliding = false
 	wall_direction = 0
+	
+
+func update_animation():
+	
+	var previous_animation = sprite.animation
+		
+	var new_animation: String
+	
+	if is_on_floor():
+		if abs(velocity.x) < 1:
+			new_animation = "idle"
+		else:
+			new_animation = "walk"
+	else:
+		var touching_wall = ray_left.is_colliding() or ray_right.is_colliding()
+		
+		if touching_wall and velocity.y > 0:
+			new_animation = "wall_slide"
+		elif velocity.y < 0:
+			new_animation = "jump"
+		else:
+			new_animation = "fall"
+	
+	if sprite.animation != new_animation:
+		sprite.play(new_animation)
+	
+	if velocity.x != 0:
+		sprite.flip_h = velocity.x < 0
+		
+	debug_label.text = sprite.animation

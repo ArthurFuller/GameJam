@@ -88,6 +88,7 @@ autowrap_trim_flags = 0
 
 [node name="Panel" type="Panel" parent="CanvasLayer" unique_id=700837344]
 process_mode = 3
+visible = false
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -143,11 +144,11 @@ text = "Fechar Jogo
 "
 
 [node name="wall_sticky" parent="." unique_id=1153802401 instance=ExtResource("7_gee14")]
-position = Vector2(416, 421)
+position = Vector2(416, 780)
 scale = Vector2(0.3199994, 1.4000013)
 
 [node name="wall_sticky2" parent="." unique_id=1435152901 instance=ExtResource("7_gee14")]
-position = Vector2(760, 421)
+position = Vector2(760, 780)
 scale = Vector2(0.3199994, 1.4000013)
 
 [node name="StampsManager" parent="." unique_id=1187935829 instance=ExtResource("9_0tnpc")]

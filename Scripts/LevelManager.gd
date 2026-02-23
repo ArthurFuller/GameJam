@@ -11,4 +11,5 @@ func load_next_level():
 		return
 		
 	var path = "res://Scenes/gameplay_" + str(current_level) + ".tscn"
-	get_tree().call_deferred("change_scene_to_file",path)
+	TransitionManager.fade_to_scene(str(path))
+	

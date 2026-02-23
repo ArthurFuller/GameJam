@@ -64,7 +64,7 @@ scale = Vector2(0.99999964, 0.99999946)
 shape = SubResource("RectangleShape2D_uwrxv")
 
 [node name="Player" parent="." unique_id=1822421311 instance=ExtResource("4_hbo4f")]
-position = Vector2(639.99994, 369.00003)
+position = Vector2(641, 361)
 jump_force = -1300.0
 wall_jump_force = -1100.0
 wall_jump_speed = 600.0

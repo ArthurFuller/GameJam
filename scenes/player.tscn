@@ -3,8 +3,54 @@
 [ext_resource type="Texture2D" uid="uid://cbb5oinmb486m" path="res://sprites/background.jpg" id="1_3vyb7"]
 [ext_resource type="Script" uid="uid://hli0a8lnq3h" path="res://Scripts/NewPlayer.gd" id="1_g2els"]
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_g2els"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_3vyb7")
+}],
+"loop": true,
+"name": &"fall",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_3vyb7")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_3vyb7")
+}],
+"loop": true,
+"name": &"jump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_3vyb7")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_3vyb7")
+}],
+"loop": true,
+"name": &"wall_slide",
+"speed": 5.0
+}]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g2els"]
 size = Vector2(800.0065, 449.99942)
+
+[sub_resource type="LabelSettings" id="LabelSettings_g2els"]
+font_size = 100
 
 [node name="Player" type="CharacterBody2D" unique_id=1822421311 groups=["Player"]]
 scale = Vector2(-0.095, 0.179)
@@ -12,7 +58,14 @@ collision_mask = 3
 script = ExtResource("1_g2els")
 speed = 400.0
 
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2128065974]
+modulate = Color(18.892157, 18.892157, 18.892157, 1)
+sprite_frames = SubResource("SpriteFrames_g2els")
+animation = &"idle"
+autoplay = "idle"
+
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=318477649]
+visible = false
 modulate = Color(5.5617785, 5.5617785, 2.4300368, 1)
 texture = ExtResource("1_3vyb7")
 
@@ -44,3 +97,17 @@ limit_bottom = 1080
 limit_smoothed = true
 position_smoothing_enabled = true
 position_smoothing_speed = 100.0
+
+[node name="Label" type="Label" parent="." unique_id=1245670743]
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 578.9474
+offset_top = -363.12845
+offset_right = 1398.9474
+offset_bottom = -225.12845
+grow_horizontal = 2
+scale = Vector2(-1.5263078, 1)
+size_flags_horizontal = 4
+label_settings = SubResource("LabelSettings_g2els")
+horizontal_alignment = 1
+vertical_alignment = 1
