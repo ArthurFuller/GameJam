@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" uid="uid://c7blmu66xywig" path="res://Scripts/StampManager.gd" id="1_7nn2f"]
 [ext_resource type="Texture2D" uid="uid://n3b5tkdvnp1o" path="res://icon.svg" id="2_50bk0"]
-[ext_resource type="PackedScene" uid="uid://ccw2meubjn35t" path="res://scenes/platform_test.tscn" id="2_r7r1r"]
-[ext_resource type="PackedScene" uid="uid://dyh011n46ogdq" path="res://scenes/bounce_platform.tscn" id="3_pvi2g"]
+[ext_resource type="PackedScene" uid="uid://ccw2meubjn35t" path="res://scenes/Plataformas/platform_test.tscn" id="2_r7r1r"]
+[ext_resource type="PackedScene" uid="uid://dyh011n46ogdq" path="res://scenes/Plataformas/bounce_platform.tscn" id="3_pvi2g"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_50bk0"]
 bg_color = Color(0.6, 0.6, 0.6, 0)

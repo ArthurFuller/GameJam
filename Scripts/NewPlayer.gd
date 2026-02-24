@@ -111,6 +111,6 @@ func update_animation():
 		sprite.play(new_animation)
 	
 	if velocity.x != 0:
-		sprite.flip_h = velocity.x < 0
+		sprite.flip_h = velocity.x > 0
 		
 	debug_label.text = sprite.animation

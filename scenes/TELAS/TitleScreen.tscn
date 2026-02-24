@@ -1,7 +1,8 @@
 [gd_scene format=3 uid="uid://bksmkeb8hgh1b"]
 
-[ext_resource type="Script" uid="uid://i3xad2cbhifi" path="res://scripts/title_screen.gd" id="1_ch40n"]
-[ext_resource type="PackedScene" uid="uid://cy83ojkfcxsnk" path="res://scenes/button.tscn" id="1_qyuap"]
+[ext_resource type="Script" uid="uid://i3xad2cbhifi" path="res://Scripts/title_screen.gd" id="1_ch40n"]
+[ext_resource type="Texture2D" uid="uid://dos3uekxeebcy" path="res://sprites/Background/cadernoBackground.png" id="1_f5wf8"]
+[ext_resource type="PackedScene" uid="uid://cy83ojkfcxsnk" path="res://scenes/UI/button.tscn" id="1_qyuap"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_ch40n"]
 font_size = 64
@@ -24,13 +25,14 @@ corner_radius_bottom_left = 15
 shadow_size = 3
 shadow_offset = Vector2(5, 5)
 
-[node name="TitleScreen" type="ColorRect" unique_id=1019813897]
+[node name="TitleScreen" type="TextureRect" unique_id=1267177315]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.6136515, 0.28805593, 0.2433176, 1)
+texture = ExtResource("1_f5wf8")
+expand_mode = 2
 script = ExtResource("1_ch40n")
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=1344149468]
@@ -71,7 +73,3 @@ text = "Opções"
 [node name="Quit" parent="MarginContainer/PanelContainer/VBoxContainer" unique_id=497263450 instance=ExtResource("1_qyuap")]
 layout_mode = 2
 text = "Sair"
-
-[connection signal="pressed" from="MarginContainer/PanelContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
-[connection signal="pressed" from="MarginContainer/PanelContainer/VBoxContainer/Options" to="." method="_on_options_pressed"]
-[connection signal="pressed" from="MarginContainer/PanelContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]

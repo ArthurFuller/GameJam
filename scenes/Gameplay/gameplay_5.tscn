@@ -1,12 +1,13 @@
 [gd_scene format=3 uid="uid://x8mefjj6fpba"]
 
 [ext_resource type="Script" uid="uid://d1bepfyany6vk" path="res://Scripts/game.gd" id="1_3vgjw"]
-[ext_resource type="PackedScene" uid="uid://ccw2meubjn35t" path="res://scenes/platform_test.tscn" id="2_rux72"]
+[ext_resource type="PackedScene" uid="uid://ccw2meubjn35t" path="res://scenes/Plataformas/platform_test.tscn" id="2_rux72"]
 [ext_resource type="Texture2D" uid="uid://cbb5oinmb486m" path="res://sprites/background.jpg" id="3_gsuy1"]
-[ext_resource type="PackedScene" uid="uid://j54lupoylhq8" path="res://scenes/player.tscn" id="4_hn82q"]
-[ext_resource type="PackedScene" uid="uid://mteggjd75p80" path="res://scenes/wall_test.tscn" id="5_4p802"]
+[ext_resource type="Texture2D" uid="uid://dos3uekxeebcy" path="res://sprites/Background/cadernoBackground.png" id="3_pjedo"]
+[ext_resource type="PackedScene" uid="uid://j54lupoylhq8" path="res://scenes/Player/player.tscn" id="4_hn82q"]
+[ext_resource type="PackedScene" uid="uid://mteggjd75p80" path="res://scenes/Plataformas/wall_test.tscn" id="5_4p802"]
 [ext_resource type="Script" uid="uid://dr5jp2hqterj5" path="res://Scripts/canvas_layer.gd" id="6_atelt"]
-[ext_resource type="PackedScene" uid="uid://bsgvg314fdwyy" path="res://scenes/stamps_ui.tscn" id="7_qahun"]
+[ext_resource type="PackedScene" uid="uid://bsgvg314fdwyy" path="res://scenes/UI/stamps_ui.tscn" id="7_qahun"]
 [ext_resource type="PackedScene" uid="uid://cokjcha33vqll" path="res://scenes/Change_scene.tscn" id="8_rux72"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_3vgjw"]
@@ -30,7 +31,7 @@ script = ExtResource("1_3vgjw")
 object_click = ExtResource("2_rux72")
 
 [node name="BackGround" type="Sprite2D" parent="." unique_id=1698583408]
-texture = ExtResource("3_gsuy1")
+texture = ExtResource("3_pjedo")
 centered = false
 region_enabled = true
 region_rect = Rect2(0, 0, 1920, 1080)

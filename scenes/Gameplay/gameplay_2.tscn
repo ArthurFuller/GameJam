@@ -1,15 +1,17 @@
-[gd_scene format=3 uid="uid://du5mt6xqi7vac"]
+[gd_scene format=3 uid="uid://bgsod1ye04fin"]
 
-[ext_resource type="Script" uid="uid://d1bepfyany6vk" path="res://Scripts/game.gd" id="1_akmw7"]
-[ext_resource type="PackedScene" uid="uid://ccw2meubjn35t" path="res://scenes/platform_test.tscn" id="2_2y2vr"]
-[ext_resource type="Texture2D" uid="uid://cbb5oinmb486m" path="res://sprites/background.jpg" id="3_1ca6g"]
-[ext_resource type="PackedScene" uid="uid://j54lupoylhq8" path="res://scenes/player.tscn" id="4_sjkk7"]
-[ext_resource type="PackedScene" uid="uid://mteggjd75p80" path="res://scenes/wall_test.tscn" id="5_2aqud"]
-[ext_resource type="Script" uid="uid://dr5jp2hqterj5" path="res://Scripts/canvas_layer.gd" id="6_0b6i3"]
-[ext_resource type="PackedScene" uid="uid://bsgvg314fdwyy" path="res://scenes/stamps_ui.tscn" id="7_yehva"]
-[ext_resource type="PackedScene" uid="uid://cokjcha33vqll" path="res://scenes/Change_scene.tscn" id="8_2y2vr"]
+[ext_resource type="Script" uid="uid://d1bepfyany6vk" path="res://Scripts/game.gd" id="1_rqf24"]
+[ext_resource type="PackedScene" uid="uid://ccw2meubjn35t" path="res://scenes/Plataformas/platform_test.tscn" id="2_k2cf8"]
+[ext_resource type="Texture2D" uid="uid://dos3uekxeebcy" path="res://sprites/Background/cadernoBackground.png" id="3_8wexe"]
+[ext_resource type="Texture2D" uid="uid://cbb5oinmb486m" path="res://sprites/background.jpg" id="3_kf867"]
+[ext_resource type="Texture2D" uid="uid://b6p406iam6e8j" path="res://sprites/Background/fase_2_20260224191814.png" id="4_0krss"]
+[ext_resource type="PackedScene" uid="uid://j54lupoylhq8" path="res://scenes/Player/player.tscn" id="4_ckuyb"]
+[ext_resource type="PackedScene" uid="uid://mteggjd75p80" path="res://scenes/Plataformas/wall_test.tscn" id="5_pcr7r"]
+[ext_resource type="Script" uid="uid://dr5jp2hqterj5" path="res://Scripts/canvas_layer.gd" id="6_jhe84"]
+[ext_resource type="PackedScene" uid="uid://bsgvg314fdwyy" path="res://scenes/UI/stamps_ui.tscn" id="7_q48s0"]
+[ext_resource type="PackedScene" uid="uid://cokjcha33vqll" path="res://scenes/Change_scene.tscn" id="8_k2cf8"]
 
-[sub_resource type="LabelSettings" id="LabelSettings_akmw7"]
+[sub_resource type="LabelSettings" id="LabelSettings_rqf24"]
 font_size = 766
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uwrxv"]
@@ -26,16 +28,16 @@ outline_size = 26
 outline_color = Color(0, 0, 0, 1)
 
 [node name="Game" type="Node2D" unique_id=305899340]
-script = ExtResource("1_akmw7")
-object_click = ExtResource("2_2y2vr")
+script = ExtResource("1_rqf24")
+object_click = ExtResource("2_k2cf8")
 
 [node name="BackGround" type="Sprite2D" parent="." unique_id=1698583408]
-texture = ExtResource("3_1ca6g")
+texture = ExtResource("3_8wexe")
 centered = false
 region_enabled = true
 region_rect = Rect2(0, 0, 1920, 1080)
 
-[node name="Scene" type="Label" parent="BackGround" unique_id=1722387960]
+[node name="Scene" type="Label" parent="BackGround" unique_id=981571183]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -47,14 +49,22 @@ offset_right = 219.0
 offset_bottom = 522.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "3"
-label_settings = SubResource("LabelSettings_akmw7")
+text = "2"
+label_settings = SubResource("LabelSettings_rqf24")
+
+[node name="BackGround2" type="Sprite2D" parent="BackGround" unique_id=204178417]
+self_modulate = Color(1, 1, 1, 0.7921569)
+position = Vector2(22, 4)
+texture = ExtResource("4_0krss")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 1920, 1080)
 
 [node name="Ground" type="Sprite2D" parent="." unique_id=1745613303]
 modulate = Color(0, 3.7285564, 0, 1)
 position = Vector2(940, 1046)
 scale = Vector2(2.5622962, 0.12888889)
-texture = ExtResource("3_1ca6g")
+texture = ExtResource("3_kf867")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Ground" unique_id=436779493]
 
@@ -63,23 +73,23 @@ position = Vector2(-3.0517578e-05, -0.00048828125)
 scale = Vector2(0.99999964, 0.99999946)
 shape = SubResource("RectangleShape2D_uwrxv")
 
-[node name="Player" parent="." unique_id=1822421311 instance=ExtResource("4_sjkk7")]
+[node name="Player" parent="." unique_id=1822421311 instance=ExtResource("4_ckuyb")]
 position = Vector2(639.99994, 369.00003)
 jump_force = -1300.0
 wall_jump_force = -1100.0
 wall_jump_speed = 600.0
 
-[node name="wall_test" parent="." unique_id=1444714008 instance=ExtResource("5_2aqud")]
+[node name="wall_test" parent="." unique_id=1444714008 instance=ExtResource("5_pcr7r")]
 position = Vector2(112, 780)
 scale = Vector2(1, 1.4000013)
 
-[node name="wall_test2" parent="." unique_id=3159626 instance=ExtResource("5_2aqud")]
+[node name="wall_test2" parent="." unique_id=3159626 instance=ExtResource("5_pcr7r")]
 position = Vector2(1806, 660)
 scale = Vector2(1, 2.105602)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2088507319]
 process_mode = 3
-script = ExtResource("6_0b6i3")
+script = ExtResource("6_jhe84")
 
 [node name="Points" type="Label" parent="CanvasLayer" unique_id=1354004126]
 clip_contents = true
@@ -93,7 +103,6 @@ autowrap_trim_flags = 0
 
 [node name="Panel" type="Panel" parent="CanvasLayer" unique_id=700837344]
 process_mode = 3
-visible = false
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -134,6 +143,7 @@ offset_bottom = 28.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(1.95, 1.95)
+theme_override_constants/separation = 21
 
 [node name="Despausar" type="Button" parent="CanvasLayer/Panel/VBoxContainer" unique_id=707026513]
 process_mode = 2
@@ -148,9 +158,9 @@ theme_override_font_sizes/font_size = 30
 text = "Fechar Jogo
 "
 
-[node name="StampsManager" parent="." unique_id=1187935829 instance=ExtResource("7_yehva")]
+[node name="StampsManager" parent="." unique_id=1187935829 instance=ExtResource("7_q48s0")]
 
-[node name="Change_scene" parent="." unique_id=929600850 instance=ExtResource("8_2y2vr")]
+[node name="Change_scene" parent="." unique_id=929600850 instance=ExtResource("8_k2cf8")]
 position = Vector2(1494, 921.00006)
 
 [connection signal="pressed" from="CanvasLayer/Panel/VBoxContainer/Despausar" to="CanvasLayer" method="_on_despausar_pressed"]

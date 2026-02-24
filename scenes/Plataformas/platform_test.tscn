@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://ccw2meubjn35t"]
 
-[ext_resource type="Texture2D" uid="uid://cbb5oinmb486m" path="res://sprites/background.jpg" id="1_clysx"]
 [ext_resource type="Script" uid="uid://dlw321xea816e" path="res://Scripts/platform.gd" id="1_tthgi"]
+[ext_resource type="Texture2D" uid="uid://boex0bdlu6gl0" path="res://sprites/Plataformas/brick.png" id="2_sthw2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tthgi"]
 size = Vector2(224, 36)
@@ -14,9 +14,9 @@ input_pickable = true
 script = ExtResource("1_tthgi")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=769801745]
-modulate = Color(1.7141744, 0, 0, 1)
-scale = Vector2(0.27999887, 0.08000094)
-texture = ExtResource("1_clysx")
+position = Vector2(7.000004, -19.5)
+scale = Vector2(0.08496094, 0.050537113)
+texture = ExtResource("2_sthw2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=399138599]
 shape = SubResource("RectangleShape2D_tthgi")

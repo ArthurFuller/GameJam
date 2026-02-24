@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dyh011n46ogdq"]
 
 [ext_resource type="Script" uid="uid://dlw321xea816e" path="res://Scripts/platform.gd" id="1_ejwbm"]
-[ext_resource type="Texture2D" uid="uid://cbb5oinmb486m" path="res://sprites/background.jpg" id="2_omwaj"]
+[ext_resource type="Texture2D" uid="uid://bm31hp2btajvn" path="res://sprites/Plataformas/trampolim.png" id="2_coj33"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ubny0"]
 size = Vector2(179, 38)
@@ -14,10 +14,9 @@ input_pickable = true
 script = ExtResource("1_ejwbm")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=258686326]
-modulate = Color(5.129198, 0, 5.129198, 1)
-position = Vector2(12.499992, -9.000008)
-scale = Vector2(0.22374998, 0.08444445)
-texture = ExtResource("2_omwaj")
+position = Vector2(11.000001, -28.999998)
+scale = Vector2(0.0625, 0.03955078)
+texture = ExtResource("2_coj33")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1993615845]
 position = Vector2(12.5, -9)

@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://bgg28efoqwhby"]
 
 [ext_resource type="Script" uid="uid://ci11uxslym0vp" path="res://Scripts/orchestrator.gd" id="1_1l2ds"]
-[ext_resource type="PackedScene" uid="uid://bksmkeb8hgh1b" path="res://scenes/TitleScreen.tscn" id="2_w3wus"]
-[ext_resource type="PackedScene" uid="uid://ckkl64ns8naqk" path="res://scenes/Options.tscn" id="3_rggio"]
+[ext_resource type="PackedScene" uid="uid://bksmkeb8hgh1b" path="res://scenes/TELAS/TitleScreen.tscn" id="2_w3wus"]
+[ext_resource type="PackedScene" uid="uid://ckkl64ns8naqk" path="res://scenes/TELAS/Options.tscn" id="3_rggio"]
 
 [node name="Orchestrator" type="Node" unique_id=1108221844]
 script = ExtResource("1_1l2ds")
