@@ -9,6 +9,7 @@ size = Vector2(224, 342)
 modulate = Color(0, 1, 1, 1)
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1124864136]
+visible = false
 scale = Vector2(0.28000033, 0.7599991)
 texture = ExtResource("1_o35ga")
 

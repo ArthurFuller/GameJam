@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dyh011n46ogdq"]
 
 [ext_resource type="Script" uid="uid://dlw321xea816e" path="res://Scripts/platform.gd" id="1_ejwbm"]
-[ext_resource type="Texture2D" uid="uid://bm31hp2btajvn" path="res://sprites/Plataformas/trampolim.png" id="2_coj33"]
+[ext_resource type="Texture2D" uid="uid://cj28r5qow0058" path="res://sprites/Plataformas/40_Sem_Titulo_20260224194135.png" id="2_coj33"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ubny0"]
 size = Vector2(179, 38)

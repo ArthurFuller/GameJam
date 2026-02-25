@@ -61,6 +61,7 @@ text = "3"
 label_settings = SubResource("LabelSettings_akmw7")
 
 [node name="Ground" type="Sprite2D" parent="." unique_id=1745613303]
+visible = false
 modulate = Color(0, 3.7285564, 0, 1)
 position = Vector2(940, 1046)
 scale = Vector2(2.5622962, 0.12888889)

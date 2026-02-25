@@ -1,9 +1,11 @@
 [gd_scene format=3 uid="uid://bsgvg314fdwyy"]
 
 [ext_resource type="Script" uid="uid://c7blmu66xywig" path="res://Scripts/StampManager.gd" id="1_7nn2f"]
-[ext_resource type="Texture2D" uid="uid://n3b5tkdvnp1o" path="res://icon.svg" id="2_50bk0"]
 [ext_resource type="PackedScene" uid="uid://ccw2meubjn35t" path="res://scenes/Plataformas/platform_test.tscn" id="2_r7r1r"]
 [ext_resource type="PackedScene" uid="uid://dyh011n46ogdq" path="res://scenes/Plataformas/bounce_platform.tscn" id="3_pvi2g"]
+[ext_resource type="Texture2D" uid="uid://dtq7vfhiyh8jb" path="res://sprites/UI/Vector.png" id="4_kbkeg"]
+[ext_resource type="Texture2D" uid="uid://clh3qcpelp032" path="res://sprites/UI/Vector_1.png" id="5_0ufq1"]
+[ext_resource type="Texture2D" uid="uid://ck54lbwjhsjaj" path="res://sprites/UI/Vector_2.png" id="6_kuqp8"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_50bk0"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
@@ -22,34 +24,31 @@ mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_50bk0")
 
 [node name="PlatformNormalButton" type="TextureButton" parent="CanvasLayer/Panel" unique_id=117763748]
-modulate = Color(11.654199, 0, 14.802055, 1)
 layout_mode = 0
 offset_left = 48.0
 offset_top = 30.0
-offset_right = 176.0
-offset_bottom = 158.0
+offset_right = 191.0
+offset_bottom = 166.0
 scale = Vector2(0.7562823, 0.54454434)
-texture_normal = ExtResource("2_50bk0")
+texture_normal = ExtResource("4_kbkeg")
 
 [node name="BouncePlatformButton" type="TextureButton" parent="CanvasLayer/Panel" unique_id=1388417990]
-modulate = Color(0, 17.239517, 0, 1)
 layout_mode = 0
 offset_left = 48.0
 offset_top = 111.0
 offset_right = 176.0
 offset_bottom = 239.0
 scale = Vector2(0.7562823, 0.54454434)
-texture_normal = ExtResource("2_50bk0")
+texture_normal = ExtResource("5_0ufq1")
 
 [node name="StickyWallButton" type="TextureButton" parent="CanvasLayer/Panel" unique_id=896749022]
-modulate = Color(0, 0, 18.892157, 1)
 layout_mode = 0
 offset_left = 48.0
 offset_top = 194.00002
-offset_right = 176.0
-offset_bottom = 322.0
+offset_right = 190.0
+offset_bottom = 321.0
 scale = Vector2(0.7562823, 0.54454434)
-texture_normal = ExtResource("2_50bk0")
+texture_normal = ExtResource("6_kuqp8")
 
 [connection signal="pressed" from="CanvasLayer/Panel/PlatformNormalButton" to="." method="_on_platform_normal_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/Panel/BouncePlatformButton" to="." method="_on_bounce_platform_button_pressed"]

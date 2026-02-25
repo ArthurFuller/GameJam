@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://ccw2meubjn35t"]
 
 [ext_resource type="Script" uid="uid://dlw321xea816e" path="res://Scripts/platform.gd" id="1_tthgi"]
-[ext_resource type="Texture2D" uid="uid://boex0bdlu6gl0" path="res://sprites/Plataformas/brick.png" id="2_sthw2"]
+[ext_resource type="Texture2D" uid="uid://x8g1enrkn8qo" path="res://sprites/Plataformas/40_Sem_Titulo_20260224195920.png" id="2_sthw2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tthgi"]
 size = Vector2(224, 36)

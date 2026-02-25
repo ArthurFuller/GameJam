@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://ccw2meubjn35t" path="res://scenes/Plataformas/platform_test.tscn" id="2_rux72"]
 [ext_resource type="Texture2D" uid="uid://cbb5oinmb486m" path="res://sprites/background.jpg" id="3_gsuy1"]
 [ext_resource type="Texture2D" uid="uid://dos3uekxeebcy" path="res://sprites/Background/cadernoBackground.png" id="3_pjedo"]
+[ext_resource type="Texture2D" uid="uid://ctk4rka06wd2f" path="res://sprites/Background/fase_5_20260224184331.png" id="4_82sax"]
 [ext_resource type="PackedScene" uid="uid://j54lupoylhq8" path="res://scenes/Player/player.tscn" id="4_hn82q"]
 [ext_resource type="PackedScene" uid="uid://mteggjd75p80" path="res://scenes/Plataformas/wall_test.tscn" id="5_4p802"]
 [ext_resource type="Script" uid="uid://dr5jp2hqterj5" path="res://Scripts/canvas_layer.gd" id="6_atelt"]
@@ -32,6 +33,14 @@ object_click = ExtResource("2_rux72")
 
 [node name="BackGround" type="Sprite2D" parent="." unique_id=1698583408]
 texture = ExtResource("3_pjedo")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 1920, 1080)
+
+[node name="BackGround2" type="Sprite2D" parent="BackGround" unique_id=1209788285]
+self_modulate = Color(1, 1, 1, 0.7921569)
+position = Vector2(3, 4)
+texture = ExtResource("4_82sax")
 centered = false
 region_enabled = true
 region_rect = Rect2(0, 0, 1920, 1080)
