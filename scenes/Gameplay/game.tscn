@@ -1084,14 +1084,15 @@ script = ExtResource("1_w76qy")
 object_click = ExtResource("2_j4o4x")
 
 [node name="BackGround" type="Sprite2D" parent="." unique_id=1698583408]
+scale = Vector2(0.75078124, 0.8194444)
 texture = SubResource("CompressedTexture2D_j4o4x")
 centered = false
-region_enabled = true
 region_rect = Rect2(0, 0, 1920, 1080)
 
-[node name="BackGround2" type="Sprite2D" parent="." unique_id=1888416650]
+[node name="BackGround2" type="Sprite2D" parent="BackGround" unique_id=1888416650]
 self_modulate = Color(1, 1, 1, 0.7921569)
-position = Vector2(3, 4)
+position = Vector2(3.9958382, 4.8813562)
+scale = Vector2(1.3492891, 1.3073448)
 texture = ExtResource("3_j4o4x")
 centered = false
 region_enabled = true
