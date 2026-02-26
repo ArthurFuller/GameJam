@@ -18,38 +18,31 @@ platform_bounce = ExtResource("3_pvi2g")
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1163051758]
 
 [node name="Panel" type="Panel" parent="CanvasLayer" unique_id=1901953517]
-offset_right = 1280.0
-offset_bottom = 720.0
+offset_right = 1287.0
+offset_bottom = 770.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_50bk0")
 
-[node name="PlatformNormalButton" type="TextureButton" parent="CanvasLayer/Panel" unique_id=117763748]
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Panel" unique_id=618681286]
 layout_mode = 0
-offset_left = 48.0
-offset_top = 30.0
-offset_right = 191.0
-offset_bottom = 166.0
-scale = Vector2(0.7562823, 0.54454434)
+offset_left = 11.0
+offset_top = 223.0
+offset_right = 154.0
+offset_bottom = 644.0
+theme_override_constants/separation = 11
+
+[node name="PlatformNormalButton" type="TextureButton" parent="CanvasLayer/Panel/VBoxContainer" unique_id=117763748]
+layout_mode = 2
 texture_normal = ExtResource("4_kbkeg")
 
-[node name="BouncePlatformButton" type="TextureButton" parent="CanvasLayer/Panel" unique_id=1388417990]
-layout_mode = 0
-offset_left = 48.0
-offset_top = 111.0
-offset_right = 176.0
-offset_bottom = 239.0
-scale = Vector2(0.7562823, 0.54454434)
+[node name="BouncePlatformButton" type="TextureButton" parent="CanvasLayer/Panel/VBoxContainer" unique_id=1388417990]
+layout_mode = 2
 texture_normal = ExtResource("5_0ufq1")
 
-[node name="StickyWallButton" type="TextureButton" parent="CanvasLayer/Panel" unique_id=896749022]
-layout_mode = 0
-offset_left = 48.0
-offset_top = 194.00002
-offset_right = 190.0
-offset_bottom = 321.0
-scale = Vector2(0.7562823, 0.54454434)
+[node name="StickyWallButton" type="TextureButton" parent="CanvasLayer/Panel/VBoxContainer" unique_id=896749022]
+layout_mode = 2
 texture_normal = ExtResource("6_kuqp8")
 
-[connection signal="pressed" from="CanvasLayer/Panel/PlatformNormalButton" to="." method="_on_platform_normal_button_pressed"]
-[connection signal="pressed" from="CanvasLayer/Panel/BouncePlatformButton" to="." method="_on_bounce_platform_button_pressed"]
-[connection signal="pressed" from="CanvasLayer/Panel/StickyWallButton" to="." method="_on_sticky_wall_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/Panel/VBoxContainer/PlatformNormalButton" to="." method="_on_platform_normal_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/Panel/VBoxContainer/BouncePlatformButton" to="." method="_on_bounce_platform_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/Panel/VBoxContainer/StickyWallButton" to="." method="_on_sticky_wall_button_pressed"]
