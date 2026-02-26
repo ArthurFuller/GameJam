@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dlw321xea816e" path="res://Scripts/platform.gd" id="1_ejwbm"]
 [ext_resource type="Texture2D" uid="uid://cj28r5qow0058" path="res://sprites/Plataformas/40_Sem_Titulo_20260224194135.png" id="2_coj33"]
+[ext_resource type="AudioStream" uid="uid://br64sqi7lukkv" path="res://Audios/Stamp 1.mp3" id="3_p3toa"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ubny0"]
 size = Vector2(179, 38)
@@ -12,6 +13,9 @@ size = Vector2(179, 38)
 [node name="BouncePlatform" type="StaticBody2D" unique_id=1083626917 groups=["bounce"]]
 input_pickable = true
 script = ExtResource("1_ejwbm")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1713224739]
+stream = ExtResource("3_p3toa")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=258686326]
 position = Vector2(11.000001, -28.999998)
