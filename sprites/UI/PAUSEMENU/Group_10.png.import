@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://mrqnrxlx3okn"
-path="res://.godot/imported/JOGARsemhover.png-f2c7df94f134817d8f07b81e02e4fed9.ctex"
+uid="uid://ftycqn2sm4n7"
+path="res://.godot/imported/Group_10.png-c0a67b2ba7187d1095780b4cc2351079.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://JOGARsemhover.png"
-dest_files=["res://.godot/imported/JOGARsemhover.png-f2c7df94f134817d8f07b81e02e4fed9.ctex"]
+source_file="res://sprites/UI/PAUSEMENU/Group_10.png"
+dest_files=["res://.godot/imported/Group_10.png-c0a67b2ba7187d1095780b4cc2351079.ctex"]
 
 [params]
 

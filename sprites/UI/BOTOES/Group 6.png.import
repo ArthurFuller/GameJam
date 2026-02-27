@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://lnnvkbj3n01j"
-path="res://.godot/imported/Group 7.png-5b1eacf2fdaa0567a1c0465dd9ffcb5f.ctex"
+uid="uid://b1rlq6nlvq5kd"
+path="res://.godot/imported/Group 6.png-33078c67136317dc16b8fad590d72662.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Group 7.png"
-dest_files=["res://.godot/imported/Group 7.png-5b1eacf2fdaa0567a1c0465dd9ffcb5f.ctex"]
+source_file="res://sprites/UI/BOTOES/Group 6.png"
+dest_files=["res://.godot/imported/Group 6.png-33078c67136317dc16b8fad590d72662.ctex"]
 
 [params]
 

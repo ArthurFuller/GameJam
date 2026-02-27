@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b1rlq6nlvq5kd"
-path="res://.godot/imported/Group 6.png-27f215f0733566be60d333afca64e111.ctex"
+uid="uid://b3baghwa4fbsk"
+path="res://.godot/imported/SAIRsemhover.png-95bc9d72071b67db3adc0278de7f6354.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Group 6.png"
-dest_files=["res://.godot/imported/Group 6.png-27f215f0733566be60d333afca64e111.ctex"]
+source_file="res://sprites/UI/BOTOES/SAIRsemhover.png"
+dest_files=["res://.godot/imported/SAIRsemhover.png-95bc9d72071b67db3adc0278de7f6354.ctex"]
 
 [params]
 

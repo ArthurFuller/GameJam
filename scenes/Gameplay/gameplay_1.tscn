@@ -6,13 +6,11 @@
 [ext_resource type="Texture2D" uid="uid://dos3uekxeebcy" path="res://sprites/Background/cadernoBackground.png" id="3_coc5m"]
 [ext_resource type="Texture2D" uid="uid://dscsonjyksooe" path="res://sprites/Background/fase_1_20260224191905.png" id="4_e1co5"]
 [ext_resource type="PackedScene" uid="uid://j54lupoylhq8" path="res://scenes/Player/player.tscn" id="4_hbo4f"]
-[ext_resource type="Script" uid="uid://dr5jp2hqterj5" path="res://Scripts/canvas_layer.gd" id="6_qixtg"]
 [ext_resource type="PackedScene" uid="uid://mteggjd75p80" path="res://scenes/Plataformas/wall_test.tscn" id="7_bvhfr"]
 [ext_resource type="PackedScene" uid="uid://bsgvg314fdwyy" path="res://scenes/UI/stamps_ui.tscn" id="7_nt65e"]
 [ext_resource type="PackedScene" uid="uid://cokjcha33vqll" path="res://scenes/Change_scene.tscn" id="8_kxwib"]
-[ext_resource type="Texture2D" uid="uid://jvpknxefyn6l" path="res://sprites/UI/34_Sem_Titulo_20260226165811.png" id="10_1mbpg"]
-[ext_resource type="FontFile" uid="uid://do4ymrot7wob7" path="res://Fonts/FrederickatheGreat-Regular.ttf" id="10_euil5"]
 [ext_resource type="Texture2D" uid="uid://be005w8yxcr2y" path="res://sprites/UI/23_Sem_Titulo_20260226163156.png" id="11_1mlou"]
+[ext_resource type="PackedScene" uid="uid://sg4bbkybw1xv" path="res://scenes/UI/canvas_layer.tscn" id="11_k66pa"]
 [ext_resource type="Texture2D" uid="uid://p1umuner33o" path="res://sprites/TILEMAP/Assets_20260225114918.png" id="11_suled"]
 [ext_resource type="FontFile" uid="uid://wixjx3xufjom" path="res://Fonts/RubikDirt-Regular.ttf" id="11_wlw1f"]
 [ext_resource type="PackedScene" uid="uid://dfr6a8kfadc4d" path="res://scenes/Plataformas/wall_sticky.tscn" id="12_bvhfr"]
@@ -2168,16 +2166,6 @@ texture = ExtResource("11_suled")
 [sub_resource type="TileSet" id="TileSet_euil5"]
 sources/0 = SubResource("TileSetAtlasSource_bvhfr")
 
-[sub_resource type="LabelSettings" id="LabelSettings_p57ef"]
-font_size = 80
-outline_size = 8
-outline_color = Color(0, 0, 0, 1)
-
-[sub_resource type="LabelSettings" id="LabelSettings_0tnpc"]
-font_size = 126
-outline_size = 26
-outline_color = Color(0, 0, 0, 1)
-
 [node name="Game" type="Node2D" unique_id=305899340]
 script = ExtResource("1_4bh5q")
 object_click = ExtResource("2_e124b")
@@ -2295,92 +2283,7 @@ jump_force = -1300.0
 wall_jump_force = -1100.0
 wall_jump_speed = 600.0
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2088507319]
-process_mode = 3
-script = ExtResource("6_qixtg")
-
-[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer" unique_id=2046054068]
-position = Vector2(55.000008, 67)
-scale = Vector2(-0.189, 0.165)
-texture = ExtResource("10_1mbpg")
-
-[node name="Points" type="Label" parent="CanvasLayer" unique_id=1354004126]
-clip_contents = true
-offset_left = 101.0
-offset_top = 34.000004
-offset_right = 228.0
-offset_bottom = 144.0
-scale = Vector2(1.5926685, 1.0456845)
-size_flags_vertical = 1
-theme_override_fonts/font = ExtResource("10_euil5")
-theme_override_font_sizes/font_size = 24
-text = "0"
-label_settings = SubResource("LabelSettings_p57ef")
-autowrap_trim_flags = 0
-
-[node name="Panel" type="Panel" parent="CanvasLayer" unique_id=700837344]
-process_mode = 3
-visible = false
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-mouse_filter = 2
-
-[node name="Label" type="Label" parent="CanvasLayer/Panel" unique_id=1712483611]
-process_mode = 3
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -200.0
-offset_top = 264.0
-offset_right = 320.0
-offset_bottom = 436.0
-grow_horizontal = 2
-text = "Pausado"
-label_settings = SubResource("LabelSettings_0tnpc")
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Panel" unique_id=1463414672]
-process_mode = 2
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -115.00006
-offset_top = -79.00003
-offset_right = 60.99994
-offset_bottom = 93.0
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(1.95, 1.95)
-theme_override_constants/separation = 11
-
-[node name="Despausar" type="Button" parent="CanvasLayer/Panel/VBoxContainer" unique_id=707026513]
-process_mode = 2
-layout_mode = 2
-theme_override_font_sizes/font_size = 30
-text = "Despausar"
-
-[node name="Reiniciar" type="Button" parent="CanvasLayer/Panel/VBoxContainer" unique_id=1821827309]
-process_mode = 2
-layout_mode = 2
-theme_override_font_sizes/font_size = 30
-text = "Reiniciar"
-
-[node name="FecharJogo" type="Button" parent="CanvasLayer/Panel/VBoxContainer" unique_id=1682249662]
-process_mode = 2
-layout_mode = 2
-theme_override_font_sizes/font_size = 30
-text = "Fechar Jogo
-"
+[node name="CanvasLayer" parent="." unique_id=217418596 instance=ExtResource("11_k66pa")]
 
 [node name="TutorialOverlay" type="CanvasLayer" parent="." unique_id=404951311]
 
@@ -2436,7 +2339,3 @@ scale = Vector2(0.3199994, 1.4000013)
 [node name="wall_sticky2" parent="." unique_id=1413003071 instance=ExtResource("12_bvhfr")]
 position = Vector2(1761, 653.00006)
 scale = Vector2(0.5398109, 2.0836494)
-
-[connection signal="pressed" from="CanvasLayer/Panel/VBoxContainer/Despausar" to="CanvasLayer" method="_on_despausar_pressed"]
-[connection signal="pressed" from="CanvasLayer/Panel/VBoxContainer/Reiniciar" to="CanvasLayer" method="_on_reiniciar_pressed"]
-[connection signal="pressed" from="CanvasLayer/Panel/VBoxContainer/FecharJogo" to="CanvasLayer" method="_on_fechar_jogo_pressed"]

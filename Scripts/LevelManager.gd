@@ -12,4 +12,6 @@ func load_next_level():
 		
 	var path = "res://scenes/Gameplay/gameplay_" + str(current_level) + ".tscn"
 	TransitionManager.fade_to_scene(str(path))
-	
+
+func _on_texture_button_button_down() -> void:
+	load_next_level()

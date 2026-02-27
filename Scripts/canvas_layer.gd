@@ -11,11 +11,5 @@ func _on_despausar_pressed() -> void:
 	get_tree().paused = false
 	pause.visible = false
 	
-
-func _on_fechar_jogo_pressed() -> void:
-	get_tree().quit()
-
-
-func _on_reiniciar_pressed() -> void:
-	get_tree().paused = false
-	get_tree().reload_current_scene()
+func _on_menu_pressed() -> void:
+	get_tree().change_scene_to_file("res://scenes/TELAS/TitleScreen.tscn")

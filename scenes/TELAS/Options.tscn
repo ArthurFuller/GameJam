@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://ckkl64ns8naqk"]
 
 [ext_resource type="PackedScene" uid="uid://cy83ojkfcxsnk" path="res://scenes/UI/button.tscn" id="1_j6yq7"]
+[ext_resource type="Texture2D" uid="uid://dos3uekxeebcy" path="res://sprites/Background/cadernoBackground.png" id="1_vhgbo"]
+[ext_resource type="Texture2D" uid="uid://bw5depp1bu7kw" path="res://sprites/UI/Group_7_2.png" id="3_nail0"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_ckjey"]
 font_size = 64
@@ -12,6 +14,16 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.6229052, 0.26047713, 0.26047713, 1)
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1379055033]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_vhgbo")
+expand_mode = 2
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=373213435]
 layout_mode = 1
@@ -34,3 +46,9 @@ layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 text = "Menu Principal"
+
+[node name="QUITButton" type="TextureButton" parent="MarginContainer" unique_id=183404633]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+texture_normal = ExtResource("3_nail0")

@@ -1,0 +1,88 @@
+[gd_scene format=3 uid="uid://sg4bbkybw1xv"]
+
+[ext_resource type="Script" uid="uid://dr5jp2hqterj5" path="res://Scripts/canvas_layer.gd" id="1_etmnd"]
+[ext_resource type="Texture2D" uid="uid://jvpknxefyn6l" path="res://sprites/UI/34_Sem_Titulo_20260226165811.png" id="2_g7aj0"]
+[ext_resource type="FontFile" uid="uid://do4ymrot7wob7" path="res://Fonts/FrederickatheGreat-Regular.ttf" id="3_7d3wb"]
+[ext_resource type="Texture2D" uid="uid://ftycqn2sm4n7" path="res://sprites/UI/PAUSEMENU/Group_10.png" id="4_j7jab"]
+[ext_resource type="Texture2D" uid="uid://dahbfxcf255e8" path="res://sprites/UI/PAUSEMENU/Group_11.png" id="5_euc6d"]
+[ext_resource type="Texture2D" uid="uid://ghnxft15a16n" path="res://sprites/UI/PAUSEMENU/Group_12.png" id="6_6o7cv"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_qq07g"]
+font_size = 80
+outline_size = 8
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6tsi8"]
+bg_color = Color(0, 0, 0, 0.8862745)
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=217418596]
+process_mode = 3
+script = ExtResource("1_etmnd")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=45569655]
+position = Vector2(55.000008, 67)
+rotation = -3.1415927
+scale = Vector2(0.189, -0.165)
+texture = ExtResource("2_g7aj0")
+
+[node name="Points" type="Label" parent="." unique_id=1400404734]
+clip_contents = true
+offset_left = 101.0
+offset_top = 34.000004
+offset_right = 228.0
+offset_bottom = 144.0
+scale = Vector2(1.792668, 1.1256841)
+size_flags_vertical = 1
+theme_override_fonts/font = ExtResource("3_7d3wb")
+theme_override_font_sizes/font_size = 21
+text = "0"
+label_settings = SubResource("LabelSettings_qq07g")
+autowrap_trim_flags = 0
+
+[node name="Panel" type="Panel" parent="." unique_id=1188602758]
+process_mode = 3
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_6tsi8")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel" unique_id=1364728900]
+process_mode = 2
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -233.0
+offset_top = -21.0
+offset_right = 228.0
+offset_bottom = 204.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.025, 1.025)
+theme_override_constants/separation = 11
+
+[node name="Sprite2D" type="Sprite2D" parent="Panel/VBoxContainer" unique_id=1169466045]
+position = Vector2(237.56096, -154.63416)
+scale = Vector2(1.2718906, 1.486584)
+texture = ExtResource("4_j7jab")
+
+[node name="Despausar" type="TextureButton" parent="Panel/VBoxContainer" unique_id=356449041]
+process_mode = 2
+layout_mode = 2
+texture_normal = ExtResource("5_euc6d")
+
+[node name="MENU" type="TextureButton" parent="Panel/VBoxContainer" unique_id=1400200056]
+process_mode = 2
+layout_mode = 2
+texture_normal = ExtResource("6_6o7cv")
+
+[connection signal="pressed" from="Panel/VBoxContainer/Despausar" to="." method="_on_despausar_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/MENU" to="." method="_on_menu_pressed"]

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d1n030ogxsd17"
-path="res://.godot/imported/CREDITOSsemhover.png-bdefdea1f74e22a62ceb224468991e7e.ctex"
+uid="uid://mrqnrxlx3okn"
+path="res://.godot/imported/JOGARsemhover.png-00644da9ca4a18db4c63ded4ae1b0117.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://CREDITOSsemhover.png"
-dest_files=["res://.godot/imported/CREDITOSsemhover.png-bdefdea1f74e22a62ceb224468991e7e.ctex"]
+source_file="res://sprites/UI/BOTOES/JOGARsemhover.png"
+dest_files=["res://.godot/imported/JOGARsemhover.png-00644da9ca4a18db4c63ded4ae1b0117.ctex"]
 
 [params]
 
