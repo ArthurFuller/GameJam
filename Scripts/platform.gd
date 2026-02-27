@@ -5,7 +5,7 @@ var is_preview:bool = false
 var can_place:bool = true
 
 @onready var game = get_node("/root/Game")
-@onready var animation: AnimatedSprite2D = $AnimatedSprite2D
+@onready var animation:  AnimatedSprite2D = $AnimatedSprite2D
 
 func _ready() -> void:
 	

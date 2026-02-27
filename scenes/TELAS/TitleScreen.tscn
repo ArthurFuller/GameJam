@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://cc7ofhim15q4u" path="res://sprites/UI/Rectangle_7.png" id="3_u37xf"]
 [ext_resource type="Texture2D" uid="uid://oi4mm6ha0y5s" path="res://sprites/UI/Group_6.png" id="4_u37xf"]
 [ext_resource type="Texture2D" uid="uid://bw5depp1bu7kw" path="res://sprites/UI/Group_7_2.png" id="6_8lkkp"]
+[ext_resource type="AudioStream" uid="uid://br64sqi7lukkv" path="res://Audios/Stamp 1.mp3" id="7_u37xf"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_ch40n"]
 font_size = 64
@@ -92,6 +93,9 @@ texture_normal = ExtResource("4_u37xf")
 [node name="QUITButton" type="TextureButton" parent="MarginContainer/PanelContainer/VBoxContainer" unique_id=352693711]
 layout_mode = 2
 texture_normal = ExtResource("6_8lkkp")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=858073662]
+stream = ExtResource("7_u37xf")
 
 [connection signal="button_down" from="MarginContainer/PanelContainer/VBoxContainer/PLAYButton" to="." method="_on_play_button_button_down"]
 [connection signal="button_down" from="MarginContainer/PanelContainer/VBoxContainer/CREDITSButton" to="." method="_on_credits_button_button_down"]
