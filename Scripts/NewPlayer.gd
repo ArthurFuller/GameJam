@@ -50,6 +50,8 @@ func _physics_process(delta: float) -> void:
 			is_moving = true
 		else:
 			is_moving = false
+			
+	play_sound()
 
 	if (Input.is_action_just_pressed("Jump")) and is_on_floor():
 		pulando.play()
@@ -91,10 +93,9 @@ func stop_wall_slide():
 	wall_direction = 0
 
 func play_sound():
-	if is_moving:
-		if not andando.playing:
-			andando.play()
-
+	if is_moving and not andando.playing:
+		andando.play()
+		
 
 func update_animation():
 	

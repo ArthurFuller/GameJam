@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://bw5depp1bu7kw" path="res://sprites/UI/Group_7_2.png" id="6_8lkkp"]
 [ext_resource type="Texture2D" uid="uid://b1rlq6nlvq5kd" path="res://Group 6.png" id="6_kgmlk"]
 [ext_resource type="Texture2D" uid="uid://lnnvkbj3n01j" path="res://Group 7.png" id="8_tq0ay"]
+[ext_resource type="AudioStream" uid="uid://cnf0q7toek13k" path="res://Audios/audiocortado.mp3" id="10_tq0ay"]
 
 [node name="TitleScreen" type="ColorRect" unique_id=1618392163]
 anchors_preset = 15
@@ -83,6 +84,7 @@ texture_normal = ExtResource("8_tq0ay")
 texture_hover = ExtResource("6_8lkkp")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=719873902]
+stream = ExtResource("10_tq0ay")
 
 [node name="MemoriasemtintaLogo" type="Sprite2D" parent="." unique_id=571790956]
 position = Vector2(394, 197)
