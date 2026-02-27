@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://cbb5oinmb486m" path="res://sprites/background.jpg" id="1_3dh46"]
 [ext_resource type="Script" uid="uid://chlp4vq0oytoq" path="res://Scripts/mortis.gd" id="1_ulkvq"]
+[ext_resource type="AudioStream" uid="uid://ctelicob7ha0y" path="res://Audios/pusou.mp3" id="3_7hxx2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4gj6j"]
 size = Vector2(643, 94)
@@ -18,5 +19,8 @@ modulate = Color(0, 0, 0, 1)
 position = Vector2(1173, 1100)
 scale = Vector2(0.83160454, 0.2213225)
 texture = ExtResource("1_3dh46")
+
+[node name="morrendo" type="AudioStreamPlayer2D" parent="." unique_id=375949213]
+stream = ExtResource("3_7hxx2")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

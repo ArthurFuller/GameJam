@@ -2,6 +2,78 @@
 
 [ext_resource type="Script" uid="uid://dlw321xea816e" path="res://Scripts/platform.gd" id="1_ejwbm"]
 [ext_resource type="Texture2D" uid="uid://cj28r5qow0058" path="res://sprites/Plataformas/40_Sem_Titulo_20260224194135.png" id="2_coj33"]
+[ext_resource type="Texture2D" uid="uid://dgq28npuygi7k" path="res://sprites/Plataformas/sprite_sheet_3.png" id="2_p3toa"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mq2c3"]
+atlas = ExtResource("2_p3toa")
+region = Rect2(0, 0, 1280, 1280)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c0xw5"]
+atlas = ExtResource("2_p3toa")
+region = Rect2(1280, 0, 1280, 1280)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jgqc2"]
+atlas = ExtResource("2_p3toa")
+region = Rect2(2560, 0, 1280, 1280)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o8jik"]
+atlas = ExtResource("2_p3toa")
+region = Rect2(0, 1280, 1280, 1280)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dlxax"]
+atlas = ExtResource("2_p3toa")
+region = Rect2(1280, 1280, 1280, 1280)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1ffp5"]
+atlas = ExtResource("2_p3toa")
+region = Rect2(2560, 1280, 1280, 1280)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r0nmy"]
+atlas = ExtResource("2_p3toa")
+region = Rect2(0, 2560, 1280, 1280)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vjg6a"]
+atlas = ExtResource("2_p3toa")
+region = Rect2(1280, 2560, 1280, 1280)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t86lf"]
+atlas = ExtResource("2_p3toa")
+region = Rect2(2560, 2560, 1280, 1280)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6albr"]
+animations = [{
+"frames": [{
+"duration": 0.4,
+"texture": SubResource("AtlasTexture_mq2c3")
+}, {
+"duration": 0.4,
+"texture": SubResource("AtlasTexture_c0xw5")
+}, {
+"duration": 0.4,
+"texture": SubResource("AtlasTexture_jgqc2")
+}, {
+"duration": 0.4,
+"texture": SubResource("AtlasTexture_o8jik")
+}, {
+"duration": 0.4,
+"texture": SubResource("AtlasTexture_dlxax")
+}, {
+"duration": 0.4,
+"texture": SubResource("AtlasTexture_1ffp5")
+}, {
+"duration": 0.4,
+"texture": SubResource("AtlasTexture_r0nmy")
+}, {
+"duration": 0.4,
+"texture": SubResource("AtlasTexture_vjg6a")
+}, {
+"duration": 0.4,
+"texture": SubResource("AtlasTexture_t86lf")
+}],
+"loop": false,
+"name": &"boing",
+"speed": 5.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ubny0"]
 size = Vector2(179, 38)
@@ -13,7 +85,14 @@ size = Vector2(179, 38)
 input_pickable = true
 script = ExtResource("1_ejwbm")
 
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=891137355]
+position = Vector2(13, -30)
+scale = Vector2(-0.2022781, 0.11994034)
+sprite_frames = SubResource("SpriteFrames_6albr")
+animation = &"boing"
+
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=258686326]
+visible = false
 position = Vector2(11.000001, -28.999998)
 scale = Vector2(0.0625, 0.03955078)
 texture = ExtResource("2_coj33")

@@ -10,6 +10,7 @@
 [ext_resource type="AudioStream" uid="uid://dl5yd5yik1xye" path="res://Audios/778541__blondpanda__steps_fine_snow_or_sand_strong_03.mp3" id="8_wwtew"]
 [ext_resource type="AudioStream" uid="uid://1mmhi72u5mi1" path="res://Audios/SFX_Jump_05.wav" id="9_uxo23"]
 [ext_resource type="AudioStream" uid="uid://veddx611xagj" path="res://Audios/freesound_community-boing-spring-mouth-harp-04-20-13-4-103346.mp3" id="10_uxo23"]
+[ext_resource type="AudioStream" uid="uid://ctelicob7ha0y" path="res://Audios/pusou.mp3" id="11_n7rn1"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3v2ag"]
 atlas = ExtResource("3_smehm")
@@ -218,9 +219,8 @@ speed = 400.0
 position = Vector2(12.653561, -94.01932)
 scale = Vector2(1.4053144, 0.8530949)
 sprite_frames = SubResource("SpriteFrames_g2els")
-animation = &"idle"
+animation = &"walk"
 autoplay = "idle"
-frame_progress = 0.6293777
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=318477649]
 visible = false
@@ -276,10 +276,10 @@ stream = ExtResource("8_wwtew")
 
 [node name="pulando" type="AudioStreamPlayer2D" parent="." unique_id=32567889]
 stream = ExtResource("9_uxo23")
-volume_db = -13.23
+volume_db = -30.0
 
 [node name="boing" type="AudioStreamPlayer2D" parent="." unique_id=414740346]
 stream = ExtResource("10_uxo23")
 
 [node name="morrendo" type="AudioStreamPlayer2D" parent="." unique_id=51282853]
-stream = ExtResource("10_uxo23")
+stream = ExtResource("11_n7rn1")

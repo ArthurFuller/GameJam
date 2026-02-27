@@ -5,6 +5,7 @@ var is_preview:bool = false
 var can_place:bool = true
 
 @onready var game = get_node("/root/Game")
+@onready var animation: AnimatedSprite2D = $AnimatedSprite2D
 
 func _ready() -> void:
 	
@@ -45,3 +46,6 @@ func _on_placement_area_body_exited(body: Node2D) -> void:
 	if $PlacementArea.get_overlapping_bodies().is_empty():
 		can_place = true
 		modulate = Color(0.3, 1, 0.3, 0.6)
+		
+func play_animation():
+	animation.play("boing")

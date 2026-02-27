@@ -51,9 +51,6 @@ func _physics_process(delta: float) -> void:
 		else:
 			is_moving = false
 
-	if is_on_floor() and is_moving:
-		play_sound()
-
 	if (Input.is_action_just_pressed("Jump")) and is_on_floor():
 		pulando.play()
 		velocity.y = jump_force
@@ -80,6 +77,7 @@ func _physics_process(delta: float) -> void:
 			var collider = collision.get_collider()
 			
 			if collider.is_in_group("bounce"):
+				collider.play_animation()
 				boing.play()
 				velocity.y = -1700.0
 
