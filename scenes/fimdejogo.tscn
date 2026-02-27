@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bjy0h5qicpsby"]
 
-[ext_resource type="Script" uid="uid://iwgebglvn4sw" path="res://videofinal.gd" id="1_3fy2t"]
+[ext_resource type="Script" uid="uid://iwgebglvn4sw" path="res://Scripts/videofinal.gd" id="1_3fy2t"]
 [ext_resource type="VideoStream" uid="uid://crh4rtujvc8i0" path="res://videoTUDO.ogv" id="2_3fy2t"]
 
 [node name="Node2D" type="Node2D" unique_id=88083710]

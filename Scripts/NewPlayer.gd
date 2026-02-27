@@ -92,7 +92,9 @@ func stop_wall_slide():
 
 func play_sound():
 	if is_moving:
-		andando.play()
+		if not andando.playing:
+			andando.play()
+
 
 func update_animation():
 	
