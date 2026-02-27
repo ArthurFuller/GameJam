@@ -4,14 +4,12 @@ extends Node2D
 @export var platform_bounce: PackedScene
 
 @onready var game = get_node("/root/Game")
-
+@onready var audio: AudioStreamPlayer = $AudioStreamPlayer
 
 var ghost = null
 var selected_scene: PackedScene = null
 
 var current_mode = ""
-
-
 
 func _process(delta: float) -> void:
 	if ghost:
@@ -25,11 +23,15 @@ func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
 		
 		if ghost and ghost.can_place:
+			play_audio()
 			place_platform()
 		
 		elif current_mode == "sticky":
+			play_audio()
 			apply_sticky()
 
+func play_audio():
+	audio.play()
 
 func place_platform():
 	if not selected_scene:
