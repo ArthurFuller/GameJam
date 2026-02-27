@@ -2,14 +2,12 @@
 
 [ext_resource type="Script" uid="uid://f5lbuimj76w6" path="res://Scripts/wall_sticky.gd" id="1_0fanl"]
 [ext_resource type="Texture2D" uid="uid://jj7lekkal3pw" path="res://sprites/sprite_sheet_CARIMBANDO.png" id="2_sv4id"]
+[ext_resource type="Texture2D" uid="uid://bmq1bqfpgdylc" path="res://sprites/Plataformas/40_Sem_Titulo_20260226183549.png" id="3_3vqdb"]
 [ext_resource type="Script" uid="uid://dlcuebymry70t" path="res://Scripts/sticky_area.gd" id="3_dcptj"]
+[ext_resource type="AudioStream" uid="uid://br64sqi7lukkv" path="res://Audios/Stamp 1.mp3" id="5_yeqjg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5crba"]
 size = Vector2(224, 342)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_yeqjg"]
-atlas = ExtResource("2_sv4id")
-region = Rect2(0, 0, 1280, 1280)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3vqdb"]
 atlas = ExtResource("2_sv4id")
@@ -19,7 +17,7 @@ region = Rect2(2560, 3840, 1280, 1280)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_yeqjg")
+"texture": ExtResource("3_3vqdb")
 }],
 "loop": true,
 "name": &"carimbo",
@@ -53,13 +51,16 @@ monitoring = false
 script = ExtResource("3_dcptj")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="StickyArea" unique_id=608472204]
-scale = Vector2(0.6249945, 0.3999998)
+scale = Vector2(0.091555655, 0.025170812)
 sprite_frames = SubResource("SpriteFrames_cb786")
 animation = &"nada"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StickyArea" unique_id=705651093]
 position = Vector2(-3.7252973e-06, 0)
 shape = SubResource("RectangleShape2D_vpvak")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=566860317]
+stream = ExtResource("5_yeqjg")
 
 [connection signal="body_entered" from="StickyArea" to="StickyArea" method="_on_body_entered"]
 [connection signal="body_exited" from="StickyArea" to="StickyArea" method="_on_body_exited"]

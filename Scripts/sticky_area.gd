@@ -20,6 +20,7 @@ func activate():
 	is_sticky = true
 	modulate = Color(0.0, 10.55, 0.0, 1.0)
 	game.points -= 1
+
 	update_animation()
 
 func deactivate():
@@ -54,4 +55,3 @@ func update_animation():
 			new_animation = "nada"
 	if sprite.animation != new_animation:
 		sprite.play(new_animation)
-	

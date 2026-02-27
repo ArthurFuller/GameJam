@@ -12,6 +12,7 @@ var can_move: bool
 var can_wall_jump:bool = false
 var is_wall_sliding: bool = false
 var wall_direction: int = 0
+var is_moving:bool 
 
 @onready var ray_left: RayCast2D = $ray_left
 @onready var ray_right: RayCast2D = $ray_right
@@ -19,6 +20,10 @@ var wall_direction: int = 0
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var debug_label: Label = $Label
 
+@onready var andando: AudioStreamPlayer2D = $andando
+@onready var pulando: AudioStreamPlayer2D = $pulando
+@onready var boing: AudioStreamPlayer2D = $boing
+@onready var morrendo: AudioStreamPlayer2D = $morrendo
 
 func _ready() -> void:
 	can_move = false
@@ -30,25 +35,32 @@ func bounce(force: float):
 	velocity.y = force
 
 func _physics_process(delta: float) -> void:
-	
 	if not can_move:
 		return
 	
 	if not is_on_floor():
 		velocity.y += GRAVIDADE * delta
-		
+	
 	if not is_wall_sliding:
 		var direction = Input.get_vector("Left", "Right", "ui_up", "ui_down")
 		var horizontal_dir = Vector2(direction.x, 0).normalized()
 		velocity.x = horizontal_dir.x * speed
+		
+		if horizontal_dir.x != 0 and is_on_floor():
+			is_moving = true
+		else:
+			is_moving = false
+
+	if is_on_floor() and is_moving:
+		play_sound()
 
 	if (Input.is_action_just_pressed("Jump")) and is_on_floor():
+		pulando.play()
 		velocity.y = jump_force
 	
 	if is_wall_sliding and Input.is_action_just_pressed("Jump"):
 		velocity = Vector2(wall_jump_speed * wall_direction, wall_jump_force)
 		#stop_wall_slide()
-		
 	
 	var is_touching_left_wall = ray_left.is_colliding()
 	var is_touching_right_wall = ray_right.is_colliding()
@@ -58,8 +70,6 @@ func _physics_process(delta: float) -> void:
 	elif is_wall_sliding and not (is_touching_left_wall or is_touching_right_wall):
 		stop_wall_slide()
 			
-		
-		
 	move_and_slide()
 	update_animation()
 	
@@ -70,21 +80,21 @@ func _physics_process(delta: float) -> void:
 			var collider = collision.get_collider()
 			
 			if collider.is_in_group("bounce"):
-				velocity.y = -900.0
-				
-				
-	
+				boing.play()
+				velocity.y = -1700.0
 
 func start_wall_slide(left, right):
 	is_wall_sliding = true
 	velocity.y = min(velocity.y, wall_slide_speed)
 	wall_direction = 1 if left else -1
-		
 
 func stop_wall_slide():
 	is_wall_sliding = false
 	wall_direction = 0
-	
+
+func play_sound():
+	if is_moving:
+		andando.play()
 
 func update_animation():
 	
@@ -114,3 +124,6 @@ func update_animation():
 		sprite.flip_h = velocity.x > 0
 		
 	debug_label.text = sprite.animation
+
+func reset_level():
+	get_tree().reload_current_scene()
