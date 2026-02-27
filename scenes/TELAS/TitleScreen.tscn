@@ -4,16 +4,9 @@
 [ext_resource type="Texture2D" uid="uid://cg8i116pp4ot6" path="res://sprites/Background/image_2.png" id="2_t08kd"]
 [ext_resource type="Texture2D" uid="uid://cdpnhs5ixfgqk" path="res://sprites/UI/Group_5.png" id="3_1og4x"]
 [ext_resource type="Texture2D" uid="uid://cc7ofhim15q4u" path="res://sprites/UI/Rectangle_7.png" id="3_u37xf"]
+[ext_resource type="Texture2D" uid="uid://c3smlc8qsok5r" path="res://Memoriasemtinta_logo.png" id="4_8lkkp"]
 [ext_resource type="Texture2D" uid="uid://oi4mm6ha0y5s" path="res://sprites/UI/Group_6.png" id="4_u37xf"]
 [ext_resource type="Texture2D" uid="uid://bw5depp1bu7kw" path="res://sprites/UI/Group_7_2.png" id="6_8lkkp"]
-
-[sub_resource type="LabelSettings" id="LabelSettings_ch40n"]
-font_size = 64
-font_color = Color(1, 0.4745098, 1, 1)
-outline_size = 9
-outline_color = Color(0, 0, 0, 1)
-shadow_size = 18
-shadow_color = Color(0, 0, 0, 0.38039216)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qyuap"]
 content_margin_left = 15.0
@@ -59,16 +52,17 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 24.0
+offset_top = 129.0
+offset_right = 24.0
+offset_bottom = 129.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/margin_top = 25
 
-[node name="Label" type="Label" parent="MarginContainer" unique_id=1245918315]
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 0
-text = "Título legal de jogo"
-label_settings = SubResource("LabelSettings_ch40n")
+[node name="MemoriasemtintaLogo" type="Sprite2D" parent="MarginContainer" unique_id=571790956]
+position = Vector2(962, 108)
+texture = ExtResource("4_8lkkp")
 
 [node name="PanelContainer" type="PanelContainer" parent="MarginContainer" unique_id=272563271]
 layout_mode = 2
