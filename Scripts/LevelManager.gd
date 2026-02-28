@@ -1,7 +1,7 @@
 extends Node
 
 var current_level := 1
-var total_levels := 6
+var total_levels := 11
 
 func load_next_level():
 	current_level += 1
@@ -12,6 +12,3 @@ func load_next_level():
 
 	var path = "res://scenes/Gameplay/gameplay" + str(current_level) + ".tscn"
 	TransitionManager.fade_to_scene(str(path))
-
-func _on_texture_button_button_down() -> void:
-	load_next_level()
