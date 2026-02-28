@@ -78,3 +78,4 @@ mouse_filter = 2
 
 [node name="Animation" type="AnimationPlayer" parent="TransitionManager" unique_id=973286237]
 libraries/ = SubResource("AnimationLibrary_jwq0s")
+speed_scale = 2.0

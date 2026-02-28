@@ -29,3 +29,7 @@ func _input(event: InputEvent) -> void:
 				object.global_position = get_global_mouse_position()
 				add_child(object)
 '''
+
+
+func _on_texture_button_pressed() -> void:
+	pass # Replace with function body.
