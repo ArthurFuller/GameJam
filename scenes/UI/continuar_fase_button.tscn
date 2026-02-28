@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://begrrv0b0eprw"]
+
+[ext_resource type="Texture2D" uid="uid://dahbfxcf255e8" path="res://sprites/UI/PAUSEMENU/Group_11.png" id="1_nail3"]
+[ext_resource type="Script" uid="uid://bk7sulqe4f8cq" path="res://Scripts/change_scene.gd" id="2_jb5u7"]
+
+[node name="ContinuarFaseButton" type="TextureButton" unique_id=383209025]
+texture_normal = ExtResource("1_nail3")
+script = ExtResource("2_jb5u7")
+
+[connection signal="button_down" from="." to="." method="_on_button_down"]

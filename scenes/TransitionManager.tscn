@@ -2,17 +2,19 @@
 
 [ext_resource type="Script" uid="uid://bt27vggkrnq8d" path="res://Scripts/transition_manager.gd" id="1_dlmx6"]
 [ext_resource type="Shader" uid="uid://c7qas01e6xwf5" path="res://shaders/TransitionManager.gdshader" id="1_op1bx"]
+[ext_resource type="Texture2D" uid="uid://bh2t83bsqe4rc" path="res://sprites/puzzlesBetween/puzzle01.png" id="2_dlmx6"]
 [ext_resource type="Texture2D" uid="uid://ddva66av641l3" path="res://sprites/mask.jpg" id="3_qgjh0"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_8fdwc"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_dlmx6"]
 shader = ExtResource("1_op1bx")
 shader_parameter/cutoff = 1.0
-shader_parameter/smooth_size = 0.338000016055
+shader_parameter/smooth_size = 0.5110000242725
 shader_parameter/mask = ExtResource("3_qgjh0")
 shader_parameter/color = Color(0, 0, 0, 1)
 
 [sub_resource type="Animation" id="Animation_4l0hl"]
 resource_name = "Fade"
+length = 0.8
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -20,7 +22,37 @@ tracks/0/path = NodePath("Background:material:shader_parameter/cutoff")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.4, 0.6, 1),
+"times": PackedFloat32Array(0, 0.4, 0.6, 0.76666665),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [1.0, 0.0, 0.0, 1.0]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("..")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.5),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"change_scene"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_qgjh0"]
+resource_name = "Fade_2"
+length = 0.8
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Background:material:shader_parameter/cutoff")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.6, 0.76666665),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
 "values": [1.0, 0.0, 0.0, 1.0]
@@ -55,10 +87,15 @@ tracks/0/keys = {
 "values": [1.0]
 }
 
+[sub_resource type="Animation" id="Animation_jwq0s"]
+resource_name = "hbuyb"
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_jwq0s"]
 _data = {
 &"Fade": SubResource("Animation_4l0hl"),
-&"RESET": SubResource("Animation_jixh0")
+&"Fade_2": SubResource("Animation_qgjh0"),
+&"RESET": SubResource("Animation_jixh0"),
+&"hbuyb": SubResource("Animation_jwq0s")
 }
 
 [node name="Node2D" type="Node2D" unique_id=1786907511]
@@ -67,14 +104,15 @@ script = ExtResource("1_dlmx6")
 [node name="TransitionManager" type="CanvasLayer" parent="." unique_id=784082218]
 layer = 5
 
-[node name="Background" type="ColorRect" parent="TransitionManager" unique_id=1490488462]
-material = SubResource("ShaderMaterial_8fdwc")
+[node name="Background" type="TextureRect" parent="TransitionManager" unique_id=1853772304]
+material = SubResource("ShaderMaterial_dlmx6")
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
+texture = ExtResource("2_dlmx6")
 
 [node name="Animation" type="AnimationPlayer" parent="TransitionManager" unique_id=973286237]
 libraries/ = SubResource("AnimationLibrary_jwq0s")
