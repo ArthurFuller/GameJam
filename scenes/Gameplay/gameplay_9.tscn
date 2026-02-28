@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://dos3uekxeebcy" path="res://sprites/Background/cadernoBackground.png" id="3_2abum"]
 [ext_resource type="Texture2D" uid="uid://ctk4rka06wd2f" path="res://sprites/Background/fase_5_20260224184331.png" id="4_qipjj"]
 [ext_resource type="Texture2D" uid="uid://cbb5oinmb486m" path="res://sprites/background.jpg" id="5_h66iw"]
+[ext_resource type="AudioStream" uid="uid://ubwxiiumvei0" path="res://Audios/MusicaGameplay.wav" id="6_fyoo4"]
 [ext_resource type="PackedScene" uid="uid://j54lupoylhq8" path="res://scenes/Player/player.tscn" id="6_ileh3"]
 [ext_resource type="PackedScene" uid="uid://sg4bbkybw1xv" path="res://scenes/UI/canvas_layer.tscn" id="7_8gdh0"]
 [ext_resource type="PackedScene" uid="uid://bsgvg314fdwyy" path="res://scenes/UI/stamps_ui.tscn" id="8_332j4"]
@@ -2318,3 +2319,8 @@ texture = ExtResource("13_gbnip")
 [node name="void" parent="." unique_id=1774971016 instance=ExtResource("14_gu8jk")]
 position = Vector2(234, -6)
 scale = Vector2(0.7255166, 1)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1545960480]
+stream = ExtResource("6_fyoo4")
+volume_db = -30.0
+autoplay = true

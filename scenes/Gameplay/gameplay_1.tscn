@@ -16,6 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://dfr6a8kfadc4d" path="res://scenes/Plataformas/wall_sticky.tscn" id="12_bvhfr"]
 [ext_resource type="Texture2D" uid="uid://v481w8j4piqa" path="res://sprites/UI/23_Sem_Titulo_20260226163150.png" id="12_wlw1f"]
 [ext_resource type="Texture2D" uid="uid://pu1lo4gnqrcl" path="res://sprites/COLLECT/01.png" id="16_1mbpg"]
+[ext_resource type="AudioStream" uid="uid://ubwxiiumvei0" path="res://Audios/MusicaGameplay.wav" id="17_k66pa"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_kxwib"]
 font_size = 766
@@ -2339,3 +2340,8 @@ scale = Vector2(0.3199994, 1.4000013)
 [node name="wall_sticky2" parent="." unique_id=1413003071 instance=ExtResource("12_bvhfr")]
 position = Vector2(1761, 653.00006)
 scale = Vector2(0.5398109, 2.0836494)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1277441890]
+stream = ExtResource("17_k66pa")
+volume_db = -30.0
+autoplay = true

@@ -1,19 +1,20 @@
-[gd_scene format=3 uid="uid://du5mt6xqi7vac"]
+[gd_scene format=3 uid="uid://x8mefjj6fpba"]
 
 [ext_resource type="Script" uid="uid://d1bepfyany6vk" path="res://Scripts/game.gd" id="1_akmw7"]
 [ext_resource type="PackedScene" uid="uid://ccw2meubjn35t" path="res://scenes/Plataformas/platform_test.tscn" id="2_2y2vr"]
 [ext_resource type="Texture2D" uid="uid://cbb5oinmb486m" path="res://sprites/background.jpg" id="3_1ca6g"]
 [ext_resource type="Texture2D" uid="uid://dos3uekxeebcy" path="res://sprites/Background/cadernoBackground.png" id="3_7n2vl"]
+[ext_resource type="Texture2D" uid="uid://dncptv7mg3muw" path="res://sprites/Background/fase_3.png" id="4_73fai"]
 [ext_resource type="PackedScene" uid="uid://j54lupoylhq8" path="res://scenes/Player/player.tscn" id="4_sjkk7"]
-[ext_resource type="Texture2D" uid="uid://dncptv7mg3muw" path="res://sprites/Background/fase_3.png" id="4_yo7f7"]
 [ext_resource type="PackedScene" uid="uid://mteggjd75p80" path="res://scenes/Plataformas/wall_test.tscn" id="5_2aqud"]
 [ext_resource type="PackedScene" uid="uid://bsgvg314fdwyy" path="res://scenes/UI/stamps_ui.tscn" id="7_yehva"]
 [ext_resource type="PackedScene" uid="uid://dfr6a8kfadc4d" path="res://scenes/Plataformas/wall_sticky.tscn" id="7_ymfy1"]
 [ext_resource type="PackedScene" uid="uid://cokjcha33vqll" path="res://scenes/Change_scene.tscn" id="8_2y2vr"]
 [ext_resource type="PackedScene" uid="uid://sg4bbkybw1xv" path="res://scenes/UI/canvas_layer.tscn" id="9_xyiw8"]
 [ext_resource type="Texture2D" uid="uid://p1umuner33o" path="res://sprites/TILEMAP/Assets_20260225114918.png" id="11_mhkgu"]
+[ext_resource type="Texture2D" uid="uid://ds67pbwjq2y3q" path="res://sprites/COLLECT/03.png" id="13_vsop8"]
+[ext_resource type="AudioStream" uid="uid://ubwxiiumvei0" path="res://Audios/MusicaGameplay.wav" id="15_ahnl8"]
 [ext_resource type="PackedScene" uid="uid://ceryx0omsffnb" path="res://scenes/Plataformas/void.tscn" id="15_cujnh"]
-[ext_resource type="Texture2D" uid="uid://ds67pbwjq2y3q" path="res://sprites/COLLECT/03.png" id="16_1xxr1"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_akmw7"]
 font_size = 766
@@ -2179,7 +2180,7 @@ region_rect = Rect2(0, 0, 1920, 1080)
 self_modulate = Color(1, 1, 1, 0.7921569)
 position = Vector2(94.295685, 0)
 scale = Vector2(1.2742659, 1.3223141)
-texture = ExtResource("4_yo7f7")
+texture = ExtResource("4_73fai")
 centered = false
 region_enabled = true
 region_rect = Rect2(0, 0, 1920, 1080)
@@ -2271,8 +2272,13 @@ scale = Vector2(1, 5.080002)
 [node name="COLETAR" type="Sprite2D" parent="." unique_id=1465811286]
 position = Vector2(1593, 525.00006)
 scale = Vector2(0.175, 0.20906937)
-texture = ExtResource("16_1xxr1")
+texture = ExtResource("13_vsop8")
 
 [node name="void" parent="." unique_id=1774971016 instance=ExtResource("15_cujnh")]
 position = Vector2(-2962, -34)
 scale = Vector2(3.3200006, 1)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=884151420]
+stream = ExtResource("15_ahnl8")
+volume_db = -30.0
+autoplay = true

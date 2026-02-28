@@ -16,6 +16,7 @@
 [ext_resource type="AudioStream" uid="uid://dojsd5mhd8vp" path="res://Audios/237375__squareal__car-crash.mp3" id="14_erqlh"]
 [ext_resource type="Texture2D" uid="uid://bg7ejrbvt03vd" path="res://sprites/enfermeiraTela.png" id="15_kqt4i"]
 [ext_resource type="AudioStream" uid="uid://bqkx8aka4bcej" path="res://Audios/bipbip.mp3" id="16_vr1aj"]
+[ext_resource type="AudioStream" uid="uid://8wrwxdv168sq" path="res://Audios/TitleScreen.wav" id="17_vr1aj"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_kqt4i"]
 font = ExtResource("13_joaes")
@@ -270,6 +271,11 @@ stream = ExtResource("16_vr1aj")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=519936863]
 libraries/ = SubResource("AnimationLibrary_4ku6s")
+
+[node name="MUSICAMENU" type="AudioStreamPlayer" parent="." unique_id=335844664]
+stream = ExtResource("17_vr1aj")
+volume_db = -30.0
+autoplay = true
 
 [connection signal="button_down" from="MarginContainer/PanelContainer/VBoxContainer/PLAYButton" to="." method="_on_play_button_button_down"]
 [connection signal="button_down" from="MarginContainer/PanelContainer/VBoxContainer/CREDITSButton" to="." method="_on_credits_button_button_down"]
