@@ -1,21 +1,21 @@
-[gd_scene format=3 uid="uid://cvc2qu6mxps43"]
+[gd_scene format=3 uid="uid://dc4km4bbrrybo"]
 
-[ext_resource type="Script" uid="uid://d1bepfyany6vk" path="res://Scripts/game.gd" id="1_rqf24"]
-[ext_resource type="PackedScene" uid="uid://ccw2meubjn35t" path="res://scenes/Plataformas/platform_test.tscn" id="2_0krss"]
-[ext_resource type="Texture2D" uid="uid://cbb5oinmb486m" path="res://sprites/background.jpg" id="3_kf867"]
-[ext_resource type="Texture2D" uid="uid://bh2t83bsqe4rc" path="res://sprites/puzzlesBetween/puzzle01.png" id="4_1mbji"]
-[ext_resource type="PackedScene" uid="uid://j54lupoylhq8" path="res://scenes/Player/player.tscn" id="4_ckuyb"]
-[ext_resource type="Texture2D" uid="uid://p1umuner33o" path="res://sprites/TILEMAP/Assets_20260225114918.png" id="5_1mbji"]
-[ext_resource type="PackedScene" uid="uid://cokjcha33vqll" path="res://scenes/Change_scene.tscn" id="8_k2cf8"]
-[ext_resource type="Texture2D" uid="uid://cibh7ct4wq2en" path="res://sprites/puzzlesBetween/setA.png" id="9_njcwm"]
-[ext_resource type="PackedScene" uid="uid://sg4bbkybw1xv" path="res://scenes/UI/canvas_layer.tscn" id="9_ub2o4"]
-[ext_resource type="PackedScene" uid="uid://mteggjd75p80" path="res://scenes/Plataformas/wall_test.tscn" id="12_njcwm"]
+[ext_resource type="Script" uid="uid://d1bepfyany6vk" path="res://Scripts/game.gd" id="1_l1css"]
+[ext_resource type="PackedScene" uid="uid://ccw2meubjn35t" path="res://scenes/Plataformas/platform_test.tscn" id="2_1we2l"]
+[ext_resource type="Texture2D" uid="uid://cbb5oinmb486m" path="res://sprites/background.jpg" id="3_1kxam"]
+[ext_resource type="Texture2D" uid="uid://dxtaww1a15frj" path="res://sprites/puzzlesBetween/puzzle_3png.png" id="4_uqfrq"]
+[ext_resource type="Texture2D" uid="uid://p1umuner33o" path="res://sprites/TILEMAP/Assets_20260225114918.png" id="5_rjcu4"]
+[ext_resource type="PackedScene" uid="uid://mteggjd75p80" path="res://scenes/Plataformas/wall_test.tscn" id="6_t8chj"]
+[ext_resource type="PackedScene" uid="uid://j54lupoylhq8" path="res://scenes/Player/player.tscn" id="7_dv1ju"]
+[ext_resource type="PackedScene" uid="uid://sg4bbkybw1xv" path="res://scenes/UI/canvas_layer.tscn" id="8_txrn0"]
+[ext_resource type="Texture2D" uid="uid://cibh7ct4wq2en" path="res://sprites/puzzlesBetween/setA.png" id="9_hdqrp"]
+[ext_resource type="PackedScene" uid="uid://cokjcha33vqll" path="res://scenes/Change_scene.tscn" id="10_8pwcl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uwrxv"]
 size = Vector2(800.0001, 449.99976)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bvhfr"]
-texture = ExtResource("5_1mbji")
+texture = ExtResource("5_rjcu4")
 29:9/0 = 0
 30:9/0 = 0
 31:9/0 = 0
@@ -2158,28 +2158,28 @@ texture = ExtResource("5_1mbji")
 sources/0 = SubResource("TileSetAtlasSource_bvhfr")
 
 [node name="Game" type="Node2D" unique_id=305899340]
-script = ExtResource("1_rqf24")
-object_click = ExtResource("2_0krss")
+script = ExtResource("1_l1css")
+object_click = ExtResource("2_1we2l")
 metadata/_edit_horizontal_guides_ = [1347.0]
 
 [node name="BACKGROUND" type="Sprite2D" parent="." unique_id=1302258599]
 modulate = Color(0, 0, 0, 1)
 position = Vector2(982, 541)
 scale = Vector2(2.55375, 2.4266667)
-texture = ExtResource("3_kf867")
+texture = ExtResource("3_1kxam")
 
 [node name="BACKGROUND2" type="Sprite2D" parent="." unique_id=1371857634]
 modulate = Color(0.62741494, 0.66035336, 0.59447634, 1)
 position = Vector2(953.00006, 654)
 scale = Vector2(0.59895784, 0.6187099)
-texture = ExtResource("4_1mbji")
+texture = ExtResource("4_uqfrq")
 
 [node name="Ground" type="Sprite2D" parent="." unique_id=1745613303]
 visible = false
 modulate = Color(0, 3.7285564, 0, 1)
 position = Vector2(940, 1046)
 scale = Vector2(2.5622962, 0.12888889)
-texture = ExtResource("3_kf867")
+texture = ExtResource("3_1kxam")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Ground" unique_id=436779493]
 
@@ -2197,15 +2197,15 @@ layer_0/tile_data = PackedInt32Array(4194302, 5570560, 52, 4259838, 5570560, 53,
 
 [node name="BORDAS" type="Sprite2D" parent="." unique_id=1197622190]
 
-[node name="wall_test" parent="BORDAS" unique_id=3159626 instance=ExtResource("12_njcwm")]
+[node name="wall_test" parent="BORDAS" unique_id=3159626 instance=ExtResource("6_t8chj")]
 position = Vector2(-99, 619)
 scale = Vector2(1, 5.080002)
 
-[node name="wall_test2" parent="BORDAS" unique_id=1154743773 instance=ExtResource("12_njcwm")]
+[node name="wall_test2" parent="BORDAS" unique_id=1154743773 instance=ExtResource("6_t8chj")]
 position = Vector2(2014, 573.00006)
 scale = Vector2(1, 5.080002)
 
-[node name="Player" parent="." unique_id=1822421311 instance=ExtResource("4_ckuyb")]
+[node name="Player" parent="." unique_id=1822421311 instance=ExtResource("7_dv1ju")]
 position = Vector2(985.99994, 941)
 rotation = 3.1415927
 scale = Vector2(0.095, -0.179)
@@ -2213,13 +2213,13 @@ jump_force = -1300.0
 wall_jump_force = -1100.0
 wall_jump_speed = 600.0
 
-[node name="CanvasLayer" parent="." unique_id=217418596 instance=ExtResource("9_ub2o4")]
+[node name="CanvasLayer" parent="." unique_id=217418596 instance=ExtResource("8_txrn0")]
 visible = false
 
 [node name="COLETAR" type="Sprite2D" parent="." unique_id=964767397]
 position = Vector2(1338.2358, 916.8828)
 scale = Vector2(0.39255595, 0.5830078)
-texture = ExtResource("9_njcwm")
+texture = ExtResource("9_hdqrp")
 
-[node name="Change_scene" parent="." unique_id=929600850 instance=ExtResource("8_k2cf8")]
+[node name="Change_scene" parent="." unique_id=929600850 instance=ExtResource("10_8pwcl")]
 position = Vector2(1329.2357, 925.88275)

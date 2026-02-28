@@ -2,7 +2,6 @@ extends ColorRect
 
 @onready var audio: AudioStreamPlayer = $AudioStreamPlayer
 
-# Referências para a transição
 @onready var canvas_layer = $CanvasLayer
 @onready var tela_preta = $CanvasLayer/ColorRect
 @onready var anim_player = $AnimationPlayer
@@ -25,10 +24,7 @@ func _on_quit_button_button_down() -> void:
 func play_audio():
 	audio.play()
 
-# NOVA FUNÇÃO: Executa a animação e espera terminar
 func iniciar_transicao():
-	# Reproduz a animação da transição
 	anim_player.play("cutscene")
 	
-	# Espera a animação terminar para continuar (mudar a cena)
 	await anim_player.animation_finished
